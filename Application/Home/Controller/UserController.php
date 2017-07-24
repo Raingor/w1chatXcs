@@ -13,8 +13,15 @@ class UserController extends RestController
 {
     public function add() {
         $method = $this->_method;
+        $user = M('user');
         if($method == 'post'){
-            
+            $data = I("post.");
+            $id = $user->add($data);
+            if($id){
+                $this->response(SUCCESS,'json');
+            }else{
+                $this->response(FAIL,'json');
+            }
         }else{
             $this->response(PAGE_NO_EXIT,'json');
         }

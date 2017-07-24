@@ -6,7 +6,8 @@
  * Time: 17:36
  */
 define('PAGE_NO_EXIT',array('errorCode'=>404,'errorMsg'=>'页面不存在'));
-
+define('SUCCESS',array('code'=>200,'Msg'=>'操作成功'));
+define('FAIL',array('code'=>300,'Msg'=>'操作失败'));
 /**
  * Get请求
  * @param $url
