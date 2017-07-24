@@ -1,14 +1,21 @@
 <?php
+
 namespace Home\Controller;
 
-use Think\Controller\RestController;
+use Home\Controller\BaseController;
 
-class IndexController extends RestController
+class IndexController extends BaseController
 {
+
+    private $userModel;
+
+    function __construct()
+    {
+        $this->userModel = M('user');
+    }
+
     public function index()
     {
-        $data ="{'id':'1','name':'admin'}";
-        $type = gettype(json_decode($data,true));
-        $this->response($type,'json');
+        $this->response($this->PAGE_NO_EXIT);
     }
 }

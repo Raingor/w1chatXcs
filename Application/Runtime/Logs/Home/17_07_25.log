@@ -1,0 +1,840 @@
+[ 2017-07-25T00:19:37+08:00 ] 127.0.0.1 /stat.htm?id=1585378&r=http%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DpGCta7FLyJ8Q3IR_4Le2IkuHGMvynjPPKJ5V6SDPTMeHW1jBB04RewIZ8BdhCeF5%26wd%3D%26eqid%3Dc6962476000084f50000000659761c8c&lg=zh-cn&ntime=none&cnzz_eid=1106670659-1500912789-http%3A%2F%2Fwww.baidu.com%2F&showp=1920x1080&t=php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%20%E5%AD%97%E6%AE%B5%E7%9A%84%E5%A3%B0%E6%98%8E%E4%B8%8E%E4%BD%BF%E7%94%A8_php%E6%8A%80%E5%B7%A7_%E8%84%9A%E6%9C%AC%E4%B9%8B%E5%AE%B6&umuuid=15d756592c21cb-0925704c0f822a-54513914-1fa400-15d756592c3424&h=1&rnd=1764379562
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Stat
+
+[ 2017-07-25T00:19:37+08:00 ] 127.0.0.1 /stat.htm?id=5488963&r=http%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DpGCta7FLyJ8Q3IR_4Le2IkuHGMvynjPPKJ5V6SDPTMeHW1jBB04RewIZ8BdhCeF5%26wd%3D%26eqid%3Dc6962476000084f50000000659761c8c&lg=zh-cn&ntime=none&cnzz_eid=1807337250-1500912789-http%3A%2F%2Fwww.baidu.com%2F&showp=1920x1080&t=php%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%20%E5%AD%97%E6%AE%B5%E7%9A%84%E5%A3%B0%E6%98%8E%E4%B8%8E%E4%BD%BF%E7%94%A8_php%E6%8A%80%E5%B7%A7_%E8%84%9A%E6%9C%AC%E4%B9%8B%E5%AE%B6&umuuid=15d756592c21cb-0925704c0f822a-54513914-1fa400-15d756592c3424&h=1&rnd=1981080018
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+ERR: 无法加载控制器:Stat
+
+[ 2017-07-25T00:27:50+08:00 ] 127.0.0.1 /stat.htm?id=1585378&r=http%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DNRLb7zndG0CCO-DnKdhdsPU7QSi9rT28Bgbx-K2EBSc4neawx9QaN_eYofHHGR9Q%26wd%3D%26eqid%3D90eca49a000015450000000659761e7d&lg=zh-cn&ntime=1500912789&cnzz_eid=1106670659-1500912789-http%3A%2F%2Fwww.baidu.com%2F&showp=1920x1080&t=php%20class%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E7%BB%86%E6%80%BB%E7%BB%93_php%E6%8A%80%E5%B7%A7_%E8%84%9A%E6%9C%AC%E4%B9%8B%E5%AE%B6&umuuid=15d756592c21cb-0925704c0f822a-54513914-1fa400-15d756592c3424&h=1&rnd=626305715
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 无法加载控制器:Stat
+
+[ 2017-07-25T00:27:51+08:00 ] 127.0.0.1 /stat.htm?id=5488916&r=http%3A%2F%2Fwww.baidu.com%2Flink%3Furl%3DNRLb7zndG0CCO-DnKdhdsPU7QSi9rT28Bgbx-K2EBSc4neawx9QaN_eYofHHGR9Q%26wd%3D%26eqid%3D90eca49a000015450000000659761e7d&lg=zh-cn&ntime=none&cnzz_eid=713908639-1500908511-http%3A%2F%2Fwww.baidu.com%2F&showp=1920x1080&t=php%20class%E7%B1%BB%E7%9A%84%E7%94%A8%E6%B3%95%E8%AF%A6%E7%BB%86%E6%80%BB%E7%BB%93_php%E6%8A%80%E5%B7%A7_%E8%84%9A%E6%9C%AC%E4%B9%8B%E5%AE%B6&umuuid=15d756592c21cb-0925704c0f822a-54513914-1fa400-15d756592c3424&h=1&rnd=343008902
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 无法加载控制器:Stat
+
+[ 2017-07-25T00:31:07+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T00:58:06+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T00:58:07+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:08+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:08+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:21+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T00:58:22+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:22+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:22+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:23+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:31+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T00:58:31+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:32+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T00:58:32+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:00:33+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:00:33+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:00:33+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:00:33+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:00:34+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-25T01:00:55+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:00:55+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:00:56+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:00:56+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:13+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:14+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:14+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:14+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:15+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:23+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:01:23+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:23+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:24+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:01:24+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:01:24+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:02:01+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:11:11+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:11:12+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:11:12+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:11:12+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:11:12+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:11:13+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-07-25T01:12:12+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant FAIL - assumed 'FAIL' D:\QiyeProject\w1chatXcs\Application\Home\Controller\IndexController.class.php 第 25 行.
+
+[ 2017-07-25T01:13:34+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant PAGE_NO_EXIT - assumed 'PAGE_NO_EXIT' D:\QiyeProject\w1chatXcs\Application\Home\Controller\IndexController.class.php 第 25 行.
+
+[ 2017-07-25T01:13:35+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant PAGE_NO_EXIT - assumed 'PAGE_NO_EXIT' D:\QiyeProject\w1chatXcs\Application\Home\Controller\IndexController.class.php 第 25 行.
+
+[ 2017-07-25T01:13:35+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant PAGE_NO_EXIT - assumed 'PAGE_NO_EXIT' D:\QiyeProject\w1chatXcs\Application\Home\Controller\IndexController.class.php 第 25 行.
+
+[ 2017-07-25T01:13:51+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:16:29+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-07-25T01:16:30+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:16:31+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:17:13+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:17:13+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:17:13+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:17:14+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:17:14+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:19:16+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:19:16+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:19:33+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:19:34+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:19:34+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:19:34+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:26+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:27+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:27+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:27+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:28+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:28+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:28+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:28+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:28+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-25T01:26:59+08:00 ] ::1 /qiye_index/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 8 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 9 行.
+NOTIC: [2] Constants may only evaluate to scalar values D:\QiyeProject\w1chatXcs\Application\Home\Common\function.php 第 10 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+
