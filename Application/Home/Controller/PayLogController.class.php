@@ -21,7 +21,7 @@ class PayLogController extends BaseController
         if ($method == 'post') {
             $user = session('USER_LOGIN_SESSION');
             $data = I('post.');
-            $data['id'] = time();
+            $data['id'] = time() . rand(0, 9);
             $data['uid'] = $user['id'];
             $data['paytime'] = time();
             $id = $this->getPaylogModel()->add($data);

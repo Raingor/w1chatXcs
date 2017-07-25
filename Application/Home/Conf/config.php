@@ -21,11 +21,13 @@ return array(
         'qiye_user/update' => 'User/updateUser',//修改用户信息
         'qiye_user/login' => 'User/wxLogin',//微信登录
 
-        'qiye_lesson/all' => 'Lesson/getAll',//查询全部课程的接口
+        'qiye_lesson/all' => 'Lesson/getAll',//查询全部推荐课程的接口
         'qiye_lesson/allType' => 'Lesson/getAllType',//查询全部课程类型的接口
         'qiye_lesson/forType/:typeid\d' => 'Lesson/getByType',//根据课程类型查询全部课程的接口
-        'qiye_lesson/videos/:lessonid\d' => 'Lesson/getVideosById',//查询课程下的全部视频音频的接口
+        'qiye_lesson/lesson/:lessonid\d' => 'Lesson/getLessonById',//查询课程下的全部视频音频的接口
+        'qiye_lesson/videos/:videoid\d' => 'Lesson/getVideoById',//查询课程下的全部视频音频的接口
         'qiye_lesson/add' => 'Lesson/add',//添加课程的接口
+        'qiye_lessonType/addType'=>'Lesson/addType',//添加课程类型的方法
 
         'qiye_payLog/add' => 'PayLog/add',//添加支付记录
         'qiye_payLog/ByUser' => 'PayLog/getPayLogByUser',//根据用户返回消费记录

@@ -70,7 +70,7 @@ class UserController extends BaseController
                 $this->response($this->getFAIL(), false);
             }
             $data = I('post.');
-            $data['id'] = $user['id'];
+            $data['id'] = time() . rand(0, 9);
             $data['update_time'] = date('Y-m-d H:i:s');
             $rows = $this->getUserModel()->save($data);
             if ($rows) {
