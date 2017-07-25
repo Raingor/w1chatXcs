@@ -19,27 +19,30 @@ class StudyLogController extends BaseController
     public function getByUid()
     {
         $method = $this->_method;
-        if ($method == 'post') {
+        if ($method == 'get') {
             if (session('USER_LOGIN_SESSION')) {
                 $user = session('USER_LOGIN_SESSION');
                 $where['uid'] = $user['id'];
-                $studyLog = $this->getStudylogModel()->where($where)->order('id desc')->select();
+                $pageIndex = I('get.p') ? I('get.p') : 1;
+                $studyLogCount = $this->getStudylogModel()->where($where)->count();
+                $studyLog = $this->getStudylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->order('id desc')->select();
                 $lessons = $this->getLessonModel()->select();
                 foreach ($studyLog as $key => $value) {
                     foreach ($lessons as $k => $v) {
                         if ($v['id'] == $value['lessonid']) {
-                            $studyLog['lesson'] = $lessons[$k];
+                            $studyLog[$key]['lesson'] = $lessons[$k];
                             break;
                         }
                     }
                 }
-                $returnData = array('user' => $user, 'studyLog' => $studyLog);
-                $this->response($returnData);
+                $studyLog['pageIndex'] = $pageIndex;
+                $studyLog['totalCount'] = $studyLogCount;
+                $this->response($studyLog);
             } else {
-                $this->response($this->OBJECT_NOT_FOUNT);
+                $this->response($this->getOBJECTNOTFOUNT(), false);
             }
         } else {
-            $this->response($this->PAGE_NO_EXIT);
+            $this->response($this->getPAGENOEXIT(), false);
         }
     }
 
@@ -62,7 +65,7 @@ class StudyLogController extends BaseController
                 $this->response($this->getFAIL());
             }
         } else {
-            $this->response($this->PAGE_NO_EXIT);
+            $this->response($this->getPAGENOEXIT(), false);
         }
     }
 

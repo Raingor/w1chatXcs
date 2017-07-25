@@ -31,12 +31,12 @@ class UserController extends BaseController
             $data['create_time'] = date('Y-m-d H:i:s');
             $id = $this->getUserModel()->add($data);
             if ($id) {
-                $this->response($this->SUCCESS);
+                $this->response($this->getSUCCESS());
             } else {
-                $this->response($this->FAIL);
+                $this->response($this->getFAIL(), false);
             }
         } else {
-            $this->response($this->getFAIL());
+            $this->response($this->getFAIL(), false);
         }
     }
 
@@ -53,7 +53,7 @@ class UserController extends BaseController
             session('User_Login_SESSION', $user);
             $this->response($user);
         } else {
-            $this->response($this->PAGE_NO_EXIT);
+            $this->response($this->getPAGENOEXIT(), false);
         }
     }
 
@@ -67,19 +67,19 @@ class UserController extends BaseController
         if ($method == 'post') {
             $user = session('USER_LOGIN_SESSION');
             if ($user == false) {
-                $this->response(FAIL);
+                $this->response($this->getFAIL(), false);
             }
             $data = I('post.');
             $data['id'] = $user['id'];
             $data['update_time'] = date('Y-m-d H:i:s');
             $rows = $this->getUserModel()->save($data);
             if ($rows) {
-                $this->response($this->SUCCESS);
+                $this->response($this->getSUCCESS());
             } else {
-                $this->response($this->FAIL);
+                $this->response($this->getFAIL(), false);
             }
         } else {
-            $this->response($this->PAGE_NO_EXIT);
+            $this->response($this->getFAIL(), false);
         }
     }
 
