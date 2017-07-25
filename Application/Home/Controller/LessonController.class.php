@@ -55,11 +55,11 @@ class LessonController extends BaseController
     /**
      * 根据课程类型 返回 课程列表
      */
-    public function getByType($typeId)
+    public function getByType($typeid)
     {
         $method = $this->_method;
         if ($method == 'get') {
-            $where['typeid'] = $typeId;
+            $where['typeid'] = $typeid;
             $pageIndex = I('get.p') ? I('get.p') : 1;
             $lessonCount = $this->getLessonModel()->where($where)->count();
             $lessons = $this->getLessonModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->select();
@@ -73,11 +73,11 @@ class LessonController extends BaseController
     /**
      * 根据指定的课程返回课程下的  视频音频
      */
-    public function getVideosById($lesson_id)
+    public function getVideosById($lessonid)
     {
         $method = $this->_method;
         if ($method == 'get') {
-            $where['lessonid'] = $lesson_id;
+            $where['lessonid'] = $lessonid;
             $videos = $this->getVideosModel()->where($where)->select();
             $this->response($videos);
         }
