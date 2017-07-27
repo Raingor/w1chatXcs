@@ -31,7 +31,6 @@ return array(
         'qiye_index/:id\d' => 'Index/index',
 
         'qiye_user/getById/:id\d' => 'User/getById',//根据id返回User对象
-        'qiye_user/update' => 'User/updateUser',//修改用户信息
         'qiye_user/login' => 'User/wxLogin',//微信登录
 
         'qiye_lesson/all' => 'Lesson/getAll',//查询全部推荐课程的接口
