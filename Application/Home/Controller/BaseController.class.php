@@ -24,12 +24,13 @@ class BaseController extends RestController
     private $videosModel;
     private $discussModel;
     private $wx_getOpenUrl;
+    private $wx_paymentUrl;
     private $wx_token;
     private $pageSize;
     private $appid;
     private $appsecret;
     private $mchid;
-    private $mch_secret;
+    private $mch_key;
 
     /**
      * @return mixed
@@ -137,12 +138,21 @@ class BaseController extends RestController
     }
 
     /**
-     * @return string_URl
+     * @return mixed
      */
     public function getWxGetOpenUrl()
     {
         return $this->wx_getOpenUrl = 'https://api.weixin.qq.com/sns/jscode2session?appid=APPID&secret=SECRET&js_code=JSCODE&grant_type=authorization_code';
     }
+
+    /**
+     * @return mixed
+     */
+    public function getWxPaymentUrl()
+    {
+        return $this->wx_paymentUrl = 'https://api.mch.weixin.qq.com/pay/unifiedorder';
+    }
+
 
     /**
      * @return mixed
@@ -171,7 +181,7 @@ class BaseController extends RestController
     /**
      * @return mixed
      */
-    public function getMchSecret()
+    public function getMchKey()
     {
         return $this->mch_secret = 'zengdazengbiaozengmenglixiaoxiao';
     }
