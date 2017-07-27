@@ -19,19 +19,20 @@ class UserController extends BaseController
     {
         $method = $this->_method;
         if ($method == 'post') {
+
             $code = I('post.code');
             $search = array("APPID", 'SECRET', 'JSCODE');
-            $replace = array($appid, $appsecret, $code);
+            $replace = array($this->getAppid(), $this->getAppsecret(), $code);
             $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
             $wxObject = sendGet($url);
-            $data['id'] = time();
-            $data['openid'] = $wxObject;
-            $data['token'] = $this->getWxToken();
-            $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H') + 2));
-            $data['create_time'] = date('Y-m-d H:i:s');
-            $id = $this->getUserModel()->add($data);
-            if ($id) {
-                $this->response($this->getSUCCESS());
+            //判断用户是否存在
+            if ($this->checkUser($wxObject['openid'])) {
+                $token = $this->updateTokenByOpenid($wxObject['openid']);
+            } else {
+                $token = $this->add($wxObject['openid']);
+            }
+            if ($token) {
+                $this->response($token);
             } else {
                 $this->response($this->getFAIL(), false);
             }
@@ -41,46 +42,44 @@ class UserController extends BaseController
     }
 
     /**
-     * 登录
-     * 根据id 返回用户
-     * @param $id
+     * 添加用户的功能
      */
-    public function getById($id)
+    private
+    function add($openid)
     {
-        $method = $this->_method;
-        if ($method == 'get') {
-            $user = $this->getUserModel()->find($id);
-            session('User_Login_SESSION', $user);
-            $this->response($user);
-        } else {
-            $this->response($this->getPAGENOEXIT(), false);
+        $data['id'] = time();
+        $data['openid'] = $openid;
+        $data['token'] = $this->getWxToken();
+        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('d') + 3));
+        $data['create_time'] = date('Y-m-d H:i:s');
+        $id = $this->getUserModel()->add($data);
+        if ($id) {
+            return $data['token'];
         }
+        return false;
     }
 
+    /**
+     * 根据openid刷新 token
+     */
+    private function updateTokenByOpenid($openid)
+    {
+        $data['token'] = $this->getWxToken();
+        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('d') + 3));
+        $row = $this->getUserModel()->where(array('openid' => $openid))->save($data);
+        if ($row) {
+            return $data['token'];
+        }
+        return false;
+    }
 
     /**
-     * 修改用户的方法
+     * 判断用户是否已存在
      */
-    public function updateUser()
+    private function checkUser($openid)
     {
-        $method = $this->_method;
-        if ($method == 'post') {
-            $user = session('USER_LOGIN_SESSION');
-            if ($user == false) {
-                $this->response($this->getFAIL(), false);
-            }
-            $data = I('post.');
-            $data['id'] = time() . rand(0, 9);
-            $data['update_time'] = date('Y-m-d H:i:s');
-            $rows = $this->getUserModel()->save($data);
-            if ($rows) {
-                $this->response($this->getSUCCESS());
-            } else {
-                $this->response($this->getFAIL(), false);
-            }
-        } else {
-            $this->response($this->getFAIL(), false);
-        }
+        $user = $this->getUserModel()->find(array('openid' => $openid));
+        return $user['openid'];
     }
 
 }

@@ -66,6 +66,7 @@ class LessonController extends BaseController
             $lessons = $this->getLessonModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->select();
             $lessons['totalCount'] = $lessonCount;
             $lessons['pageIndex'] = $pageIndex;
+            $lessons['typeid'] = $typeid;
             $this->response($lessons);
         }
         $this->response($this->getPAGENOEXIT(), false);
@@ -79,8 +80,11 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'get') {
             $where['lessonid'] = $lessonid;
+            $lesson = $this->getLessonModel()->find($lessonid);
             $videos = $this->getVideosModel()->where($where)->select();
-            $this->response($videos);
+            $return['lesson'] = $lesson;
+            $return['videos'] = $videos;
+            $this->response($return);
         }
         $this->response($this->getPAGENOEXIT(), false);
 
@@ -95,6 +99,7 @@ class LessonController extends BaseController
         if ($method == 'post') {
             $data = I('post.');
             $data['id'] = time() . rand(0, 9);
+            $data['create_time'] = time();
             $id = $this->getLessonModel()->add($data);
             if ($id) {
                 $this->response($this->getSUCCESS());
@@ -136,5 +141,27 @@ class LessonController extends BaseController
             }
         }
         $this->response($this->getPAGENOEXIT(), false);
+    }
+
+
+    /**
+     * 搜索课程
+     */
+    public function searchByKey()
+    {
+        $method = $this->_method;
+        if ($method == 'get') {
+            $key = I('get.key');
+            $pageIndex = I('get.p') ? I('get.p') : 1;
+            $where['title'] = array('like', "%$key%");
+            $where['author'] = array('like', "%$key%");
+            $lessonsCount = $this->getLessonModel()->where($where)->count();
+            $lessons = $this->getLessonModel()->where($where)->page($pageIndex . ',' . $this->getPageSize())->select();
+            $return['totalCount'] = $lessonsCount;
+            $return['lessons'] = $lessons;
+            $return['pageIndex'] = $pageIndex;
+            $this->response($return);
+        }
+
     }
 }
