@@ -2,12 +2,15 @@
 
 namespace Home\Controller;
 
+use Home\Controller\UtilController;
+
 class IndexController extends BaseController
 {
     public function index()
     {
-        $data['ip'] = get_client_ip();
-        $this->response($data);
+        $util = new  UtilController();
+        $result = $util->wxPay();
+        dump($result);
 
     }
 }

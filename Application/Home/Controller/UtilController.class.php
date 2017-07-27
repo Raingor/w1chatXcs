@@ -9,26 +9,35 @@
 namespace Home\Controller;
 
 use Home\Controller;
+use Think\Exception;
 
 class UtilController extends BaseController
 {
     /**
      * 小程序统一下单
      */
-    public function wxPay($openid = 123456789)
+    public function wxPay($openid = 123456789, $lessonid, $userid)
     {
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['sign'] = $this->buildSign($payParam);
         $payParam['body'] = "企业公开课";
-        $payParam['out_trade_no'] = time();
+        $payParam['out_trade_no'] = $lessonid . 'and' . $userid;
         $payParam['total_fee'] = 1;//分作单位
-        $payParam['spbill_create_ip'] = get_client_ip();
-        $payParam['notify_url'] = U('notifyPay');
+        $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
+        $payParam['notify_url'] = 'http://demo.qiyeclass.com' . U('notifyPay');
         $payParam['trade_type'] = 'JSAPI';
         $payParam['openid'] = $openid;
-        $this->ToXml($payParam);
+        $xml = $this->ToXml($payParam);
+        $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
+        $result = $this->FromXml($result);
+        if ($result['return_code'] == 'SUCCESS') {
+            $data['parameters'] = $this->GetJsApiParameters($result);
+            $this->response($data);
+        } else {
+            $this->response($this->getOBJECTNOTFOUNT(), false);
+        }
     }
 
     /**
@@ -37,6 +46,26 @@ class UtilController extends BaseController
      */
     public function notifyPay()
     {
+        $xml = $GLOBALS['HTTP_RAW_POST_DATA'];//$GLOBALS['HTTP_RAW_POST_DATA'];接受POST数据 也接收MIME数据
+        $xmlarr = $this->FromXml($xml);
+        if ($xmlarr['result_code'] == 'SUCCESS') {
+            if ($xmlarr['out_trade_no']) {
+                $array = explode('and', $xmlarr['out_trade_no']);
+                $data['id'] = time() . rand(0, 9);
+                $data['uid'] = $array[1];
+                $data['paytime'] = time();
+                $data['lessonid'] = $array[0];
+                $lesson = M('lesson')->find($data['lessonid']);
+                $data['paymoney'] = $lesson['price'];
+                $id = M('paylog')->add($data);
+                if ($id) {
+                    $rt['return_code'] = "SUCCESS";
+                    $rt['return_msg'] = "OK";
+                    $rtxml = $this->ToXml($rt);
+                    echo $rtxml;
+                }
+            }
+        }
 
     }
 
@@ -72,16 +101,16 @@ class UtilController extends BaseController
      * 输出xml字符
      * @throws WxPayException
      **/
-    public function ToXml()
+    public function ToXml($data)
     {
-        if (!is_array($this->values)
-            || count($this->values) <= 0
+        if (!is_array($data)
+            || count($data) <= 0
         ) {
             exit("数组数据异常！");
         }
 
         $xml = "<xml>";
-        foreach ($this->values as $key => $val) {
+        foreach ($data as $key => $val) {
             if (is_numeric($val)) {
                 $xml .= "<" . $key . ">" . $val . "</" . $key . ">";
             } else {
@@ -100,7 +129,7 @@ class UtilController extends BaseController
     public function FromXml($xml)
     {
         if (!$xml) {
-            throw new WxPayException("xml数据异常！");
+            throw new Exception("xml数据异常！");
         }
         //将XML转为array
         //禁止引用外部xml实体
@@ -109,5 +138,65 @@ class UtilController extends BaseController
         return $this->values;
     }
 
+    /**
+     * 以post方式提交xml到对应的接口url
+     *
+     * @param string $xml 需要post的xml数据
+     * @param string $url url
+     * @param bool $useCert 是否需要证书，默认不需要
+     * @param int $second url执行超时时间，默认30s
+     * @throws WxPayException
+     */
+    private function postXmlCurl($xml, $url, $second = 30)
+    {
+        $ch = curl_init();
+        //设置超时
+        curl_setopt($ch, CURLOPT_TIMEOUT, $second);
+
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, TRUE);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);//严格校验
+        //设置header
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        //要求结果为字符串且输出到屏幕上
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        //post提交方式
+        curl_setopt($ch, CURLOPT_POST, TRUE);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $xml);
+        //运行curl
+        $data = curl_exec($ch);
+        //返回结果
+        if ($data) {
+            curl_close($ch);
+            return $data;
+        } else {
+            $error = curl_errno($ch);
+            curl_close($ch);
+        }
+    }
+
+    /**
+     *
+     * 获取jsapi支付的参数
+     * @param array $UnifiedOrderResult 统一支付接口返回的数据
+     * @throws WxPayException
+     *
+     * @return json数据，可直接填入js函数作为参数
+     */
+    public function GetJsApiParameters($UnifiedOrderResult)
+    {
+        if (!array_key_exists("appid", $UnifiedOrderResult)
+            || !array_key_exists("prepay_id", $UnifiedOrderResult)
+            || $UnifiedOrderResult['prepay_id'] == "") {
+            exit("参数错误");
+        }
+        $jsapi['appId'] = $UnifiedOrderResult["appid"];
+        $jsapi['timeStamp'] = time() . '';
+        $jsapi['nonceStr'] = $this->getNonceStr(32);
+        $jsapi['package'] = "prepay_id=" . $UnifiedOrderResult['prepay_id'];
+        $jsapi['signType'] = "MD5";
+        $parameters = json_encode($jsapi);
+        return $parameters;
+    }
 
 }
