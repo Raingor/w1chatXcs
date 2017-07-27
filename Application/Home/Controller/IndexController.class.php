@@ -6,7 +6,8 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        $this->response($this->getSUCCESS());
+        $data['ip'] = get_client_ip();
+        $this->response($data);
 
     }
 }

@@ -15,12 +15,29 @@ class UtilController extends BaseController
     /**
      * 小程序统一下单
      */
-    public function wxPay()
+    public function wxPay($openid = 123456789)
     {
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
-        $payParam['sign'];
+        $payParam['sign'] = $this->buildSign($payParam);
+        $payParam['body'] = "企业公开课";
+        $payParam['out_trade_no'] = time();
+        $payParam['total_fee'] = 1;//分作单位
+        $payParam['spbill_create_ip'] = get_client_ip();
+        $payParam['notify_url'] = U('notifyPay');
+        $payParam['trade_type'] = 'JSAPI';
+        $payParam['openid'] = $openid;
+        $this->ToXml($payParam);
+    }
+
+    /**
+     * @param int $length
+     * @return string
+     */
+    public function notifyPay()
+    {
+
     }
 
     /*
@@ -48,6 +65,7 @@ class UtilController extends BaseController
         $str = $str . '&key=' . $this->getMchKey();
         $sign = md5($str);
         $sign = strtoupper($sign);
+        return $sign;
     }
 
     /**
@@ -56,6 +74,12 @@ class UtilController extends BaseController
      **/
     public function ToXml()
     {
+        if (!is_array($this->values)
+            || count($this->values) <= 0
+        ) {
+            exit("数组数据异常！");
+        }
+
         $xml = "<xml>";
         foreach ($this->values as $key => $val) {
             if (is_numeric($val)) {
@@ -75,11 +99,14 @@ class UtilController extends BaseController
      */
     public function FromXml($xml)
     {
+        if (!$xml) {
+            throw new WxPayException("xml数据异常！");
+        }
         //将XML转为array
         //禁止引用外部xml实体
         libxml_disable_entity_loader(true);
-        $data = json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
-        return $data;
+        $this->values = json_decode(json_encode(simplexml_load_string($xml, 'SimpleXMLElement', LIBXML_NOCDATA)), true);
+        return $this->values;
     }
 
 

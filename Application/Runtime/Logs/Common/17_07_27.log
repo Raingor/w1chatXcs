@@ -3,3 +3,8 @@ INFO: [ app_init ] --START--
 INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
 INFO: [ app_init ] --END-- [ RunTime:0.008765s ]
 
+[ 2017-07-27T18:19:00+08:00 ] ::1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000007s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+
