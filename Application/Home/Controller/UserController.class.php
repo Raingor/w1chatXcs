@@ -17,27 +17,28 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
-        $method = $this->_method;
-        if ($method == 'post') {
-
-            $code = I('post.code');
-            $search = array("APPID", 'SECRET', 'JSCODE');
-            $replace = array($this->getAppid(), $this->getAppsecret(), $code);
-            $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
-            $wxObject = sendGet($url);
-            //判断用户是否存在
-            if ($this->checkUser($wxObject['openid'])) {
-                $token = $this->updateTokenByOpenid($wxObject['openid']);
-            } else {
-                $token = $this->add($wxObject['openid']);
-            }
-            if ($token) {
-                $this->response($token);
-            } else {
-                $this->response($this->getFAIL(), 502);
-            }
+        $code = '0717n0SR0bb71a2KlRRR0nYkSR07n0SY';
+        $search = array("APPID", 'SECRET', 'JSCODE');
+        $replace = array($this->getAppid(), $this->getAppsecret(), $code);
+        $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
+        $wxObject = sendGet($url);
+        //判断用户是否存在
+        if ($this->checkUser($wxObject['openid'])) {
+            $data['token'] = $this->getWxToken();
+            $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
+            $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->save($data);
         } else {
-            $this->response($this->getFAIL(), 404);
+            $data['id'] = time();
+            $data['openid'] = $wxObject['openid'];
+            $data['token'] = $this->getWxToken();
+            $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
+            $data['create_time'] = date('Y-m-d H:i:s');
+            $id = M('User')->add($data);
+        }
+        if ($id) {
+            $this->response(array('token' => $data['token']));
+        } else {
+            $this->response($this->getFAIL(), 502);
         }
     }
 
@@ -54,6 +55,7 @@ class UserController extends BaseController
         $data['create_time'] = date('Y-m-d H:i:s');
         $id = $this->getUserModel()->add($data);
         if ($id) {
+
             return $data['token'];
         }
         return false;
