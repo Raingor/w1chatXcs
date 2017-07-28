@@ -30,6 +30,5 @@ function sendPost($url)
 //    curl_setopt($ch, CURLOPT_POSTFIELDS, $params);
     $result = curl_exec($ch);
     curl_close($ch);
-    $result = json_decode($result, true);
     return $result;
 }

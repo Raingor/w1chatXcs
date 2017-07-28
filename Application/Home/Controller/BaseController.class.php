@@ -102,7 +102,7 @@ class BaseController extends RestController
      */
     public function getLessonTypeModel()
     {
-        return $this->lessonTypeModel = M('lessonType');
+        return $this->lessonTypeModel = M('lessontype');
     }
 
     /**
