@@ -17,6 +17,9 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
+        if(IS_POST){
+            echo '这是个post请求';
+        }
         dump('post:' . I('post.code'));
         dump('get:' . I('get.code'));
         dump('put:' . I('put.code'));
