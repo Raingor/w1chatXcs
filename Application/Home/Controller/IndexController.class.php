@@ -8,12 +8,17 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        $data['id'] = time();
-        $data['openid'] = 123456;
-        $data['token'] = $this->getWxToken();
-        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
-        $data['create_time'] = date('Y-m-d H:i:s');
-        $id = $this->getUserModel()->add($data);
-        $this->response(array('data' => $data, 'sql' => $id));
+//        $search = array("APPID", 'SECRET', 'JSCODE');
+//        $replace = array($this->getAppid(), $this->getAppsecret(), '011LX2ti2lBuSE0L8Lti2rvsti2LX2ts');
+//        $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
+//        dump($url);
+        $url='https://api.weixin.qq.com/sns/jscode2session?appid=wx6fc5f4836fc51f82&secret=aab9cf6c1f3de3f225d787afb097e40d&js_code=001Wsqyt1Qa1bb0O5bAt1efHyt1WsqyM&grant_type=authorization_code';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        $result = curl_exec($ch);
+        curl_close($ch);
+        dump($result);
     }
 }
