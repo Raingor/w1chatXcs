@@ -24,7 +24,11 @@ class UserController extends BaseController
         $wxObject = sendPost($url);
         //判断用户是否存在
         if ($this->checkUser($wxObject['openid'])) {
-            file_put_contents('loginLog.txt', $wxObject['openid'] . 'update---' . date('Y-m-d H:i:s'), FILE_APPEND);
+            $str = '';
+            foreach ($wxObject as $key => $value) {
+                $str .= '"' . $key . '":' . $value . '\n';
+            }
+            file_put_contents('loginLog.txt', $str . 'update---' . date('Y-m-d H:i:s'), FILE_APPEND);
             $data['token'] = $this->getWxToken();
             $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
             $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->save($data);
