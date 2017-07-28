@@ -37,7 +37,7 @@ class LessonController extends BaseController
             $lessons['pageIndex'] = $pageIndex;
             $this->response($lessons);
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 
     /**
@@ -50,7 +50,7 @@ class LessonController extends BaseController
             $lessonType = $this->getLessonTypeModel()->select();
             $this->response($lessonType);
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 
     /**
@@ -69,7 +69,7 @@ class LessonController extends BaseController
             $lessons['typeid'] = $typeid;
             $this->response($lessons);
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 
     /**
@@ -86,7 +86,7 @@ class LessonController extends BaseController
             $return['videos'] = $videos;
             $this->response($return);
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
 
     }
 
@@ -104,10 +104,10 @@ class LessonController extends BaseController
             if ($id) {
                 $this->response($this->getSUCCESS());
             } else {
-                $this->response($this->getFAIL(), 502);
+                $this->response($this->getFAIL(), 502, false);
             }
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 
     /**
@@ -120,7 +120,7 @@ class LessonController extends BaseController
             $video = $this->getVideosModel()->find($videoid);
             $this->response($video);
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 
     /**
@@ -137,10 +137,10 @@ class LessonController extends BaseController
             if ($id) {
                 $this->response($this->getSUCCESS());
             } else {
-                $this->response($this->getFAIL(), 502);
+                $this->response($this->getFAIL(), 502, false);
             }
         }
-        $this->response($this->getPAGENOEXIT(), 404);
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 
 

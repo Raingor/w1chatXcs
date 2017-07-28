@@ -39,10 +39,10 @@ class StudyLogController extends BaseController
                 $studyLog['totalCount'] = $studyLogCount;
                 $this->response($studyLog);
             } else {
-                $this->response($this->getOBJECTNOTFOUNT(), 500);
+                $this->response($this->getOBJECTNOTFOUNT(), 500, false);
             }
         } else {
-            $this->response($this->getPAGENOEXIT(), 404);
+            $this->response($this->getPAGENOEXIT(), 404, false);
         }
     }
 
@@ -62,10 +62,10 @@ class StudyLogController extends BaseController
             if ($out_studylog) {
                 $this->response($this->getSUCCESS());
             } else {
-                $this->response($this->getFAIL(),502);
+                $this->response($this->getFAIL(), 502, false);
             }
         } else {
-            $this->response($this->getPAGENOEXIT(), 404);
+            $this->response($this->getPAGENOEXIT(), 404, false);
         }
     }
 

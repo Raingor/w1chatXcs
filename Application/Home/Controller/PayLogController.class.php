@@ -59,7 +59,7 @@ class PayLogController extends BaseController
             $paylogs['pageIndex'] = $pageIndex;
             $this->response($paylogs);
         } else {
-            $this->response($this->getPAGENOEXIT(), 404);
+            $this->response($this->getPAGENOEXIT(), 404, false);
         }
     }
 }

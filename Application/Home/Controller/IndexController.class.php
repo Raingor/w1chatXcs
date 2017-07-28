@@ -13,7 +13,7 @@ class IndexController extends BaseController
         $data['token'] = $this->getWxToken();
         $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
         $data['create_time'] = date('Y-m-d H:i:s');
-        $id = M('User')->fetchSql(true)->add($data);
+        $id = $this->getUserModel()->add($data);
         $this->response(array('data' => $data, 'sql' => $id));
     }
 }

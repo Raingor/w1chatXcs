@@ -17,7 +17,7 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
-        $code = '0717n0SR0bb71a2KlRRR0nYkSR07n0SY';
+        $code = I('post.code');
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
         $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
@@ -38,7 +38,7 @@ class UserController extends BaseController
         if ($id) {
             $this->response(array('token' => $data['token']));
         } else {
-            $this->response($this->getFAIL(), 502);
+            $this->response($this->getFAIL(), 502, false);
         }
     }
 
