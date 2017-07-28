@@ -21,6 +21,7 @@ class UserController extends BaseController
         dump('get:' . I('get.code'));
         dump('put:' . I('put.code'));
         dump('param:' . I('param.code'));
+        dump('request' . I('request.code'));
         $code = $_POST['code'];
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
