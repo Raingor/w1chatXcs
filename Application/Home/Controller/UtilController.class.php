@@ -16,19 +16,20 @@ class UtilController extends BaseController
     /**
      * 小程序统一下单
      */
-    public function wxPay($openid = 123456789, $lessonid, $userid)
+    public function wxPay($token, $lessonid)
     {
+        $user = $this->getUserModel()->where(array('token' => $token))->find();
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['sign'] = $this->buildSign($payParam);
         $payParam['body'] = "企业公开课";
-        $payParam['out_trade_no'] = $lessonid . 'and' . $userid;
+        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'];
         $payParam['total_fee'] = 1;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
         $payParam['notify_url'] = 'http://demo.qiyeclass.com' . U('notifyPay');
         $payParam['trade_type'] = 'JSAPI';
-        $payParam['openid'] = $openid;
+        $payParam['openid'] = $user['openid'];
         $xml = $this->ToXml($payParam);
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
@@ -187,7 +188,8 @@ class UtilController extends BaseController
     {
         if (!array_key_exists("appid", $UnifiedOrderResult)
             || !array_key_exists("prepay_id", $UnifiedOrderResult)
-            || $UnifiedOrderResult['prepay_id'] == "") {
+            || $UnifiedOrderResult['prepay_id'] == ""
+        ) {
             exit("参数错误");
         }
         $jsapi['appId'] = $UnifiedOrderResult["appid"];
