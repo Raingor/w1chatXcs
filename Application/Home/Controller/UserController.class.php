@@ -38,6 +38,8 @@ class UserController extends BaseController
                 $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
                 $data['create_time'] = date('Y-m-d H:i:s');
                 $id = M('User')->add($data);
+            } else {
+                file_put_contents('loginLog.txt', $wxObject['openid'] . 'error---' . date('Y-m-d H:i:s'), FILE_APPEND);
             }
         }
         if ($id) {
