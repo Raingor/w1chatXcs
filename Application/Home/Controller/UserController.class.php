@@ -27,9 +27,10 @@ class UserController extends BaseController
             foreach ($wxObject as $key => $value) {
                 dump($key . '----' . $value);
             }
-            file_put_contents('loginLog.txt', 'update---' . date('Y-m-d H:i:s'), FILE_APPEND);
             $data['token'] = $this->getWxToken();
             $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
+            $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->fetchSql(true)->save($data);
+            file_put_contents('loginLog.txt', 'sql' . $id . ';' . date('Y-m-d H:i:s'), FILE_APPEND);
             $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->save($data);
         } else {
             if ($wxObject['openid'] != null) {
