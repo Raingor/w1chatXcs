@@ -17,21 +17,13 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
-        if(IS_POST){
-            echo '这是个post请求';
-        }
-        dump('post:' . I('post.code'));
-        dump('get:' . I('get.code'));
-        dump('put:' . I('put.code'));
-        dump('param:' . I('param.code'));
-        dump('request' . I('request.code'));
-        $code = $_POST['code'];
+        $code = I('param.code');
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
         $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
         dump('code-----' . $code);
         $wxObject = sendPost($url);
-        dump('wxObject:' . $wxObject);
+        dump('wxObject:' . $wxObject['openid']);
         //判断用户是否存在
         if ($this->checkUser($wxObject['openid'])) {
             $data['token'] = $this->getWxToken();
