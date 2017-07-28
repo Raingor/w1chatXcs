@@ -22,6 +22,9 @@ class UserController extends BaseController
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
         $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
         $wxObject = sendPost($url);
+        if (is_string($wxObject)) {
+            $wxObject = json_decode($wxObject, true);
+        }
         //判断用户是否存在
         if ($this->checkUser($wxObject['openid'])) {
             foreach ($wxObject as $key => $value) {
