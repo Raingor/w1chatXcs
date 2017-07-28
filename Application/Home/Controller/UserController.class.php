@@ -34,10 +34,10 @@ class UserController extends BaseController
             if ($token) {
                 $this->response($token);
             } else {
-                $this->response($this->getFAIL(), false);
+                $this->response($this->getFAIL(), 502);
             }
         } else {
-            $this->response($this->getFAIL(), false);
+            $this->response($this->getFAIL(), 404);
         }
     }
 

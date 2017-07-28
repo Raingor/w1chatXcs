@@ -8,7 +8,6 @@ class IndexController extends BaseController
 {
     public function index()
     {
-       dump('Hello World');
-
+        $this->response($data['test'] = 'test', 'json', 200);
     }
 }

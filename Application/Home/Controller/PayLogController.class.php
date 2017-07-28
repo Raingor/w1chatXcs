@@ -28,10 +28,10 @@ class PayLogController extends BaseController
             if ($id) {
                 $this->response($this->getSUCCESS());
             } else {
-                $this->response($this->getFAIL(), false);
+                $this->response($this->getFAIL(), 502);
             }
         }
-        $this->response($this->getPAGENOEXIT(), false);
+        $this->response($this->getPAGENOEXIT(), 404);
     }
 
     /**
@@ -59,7 +59,7 @@ class PayLogController extends BaseController
             $paylogs['pageIndex'] = $pageIndex;
             $this->response($paylogs);
         } else {
-            $this->response($this->getPAGENOEXIT(), false);
+            $this->response($this->getPAGENOEXIT(), 404);
         }
     }
 }

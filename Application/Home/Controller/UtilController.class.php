@@ -37,7 +37,7 @@ class UtilController extends BaseController
             $data['parameters'] = $this->GetJsApiParameters($result);
             $this->response($data);
         } else {
-            $this->response($this->getOBJECTNOTFOUNT(), false);
+            $this->response($this->getOBJECTNOTFOUNT(), 500);
         }
     }
 
