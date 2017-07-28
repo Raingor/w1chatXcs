@@ -45,7 +45,7 @@ return array(
         'qiye_stuLog/add' => 'StudyLog/add',//添加学习记录
         'qiye_stuLog/ByUser' => 'StudyLog/getByUid',//根据用户返回学习记录
 
-
+        'qiye_pay/wxpay' => 'Util/wxPay',//微信jsapi支付
 
     ), // 默认路由规则 针对模块
 );
