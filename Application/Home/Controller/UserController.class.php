@@ -17,7 +17,10 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
-        dump(I('post.'));
+        dump('post:'.I('post.'));
+        dump('get:'.I('get.'));
+        dump('put:'.I('put.'));
+        dump('param:'.I('param.'));
         $code = $_POST['code'];
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
@@ -31,12 +34,14 @@ class UserController extends BaseController
             $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
             $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->save($data);
         } else {
-            $data['id'] = time();
-            $data['openid'] = $wxObject['openid'];
-            $data['token'] = $this->getWxToken();
-            $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
-            $data['create_time'] = date('Y-m-d H:i:s');
-            $id = M('User')->add($data);
+            if ($wxObject['openid'] != null) {
+                $data['id'] = time();
+                $data['openid'] = $wxObject['openid'];
+                $data['token'] = $this->getWxToken();
+                $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
+                $data['create_time'] = date('Y-m-d H:i:s');
+                $id = M('User')->add($data);
+            }
         }
         if ($id) {
             $this->response(array('token' => $data['token']));
