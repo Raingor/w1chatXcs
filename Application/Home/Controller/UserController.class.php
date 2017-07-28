@@ -21,9 +21,7 @@ class UserController extends BaseController
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
         $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
-        dump('code-----' . $code);
         $wxObject = sendPost($url);
-        dump('wxObject:' . $wxObject['openid']);
         //判断用户是否存在
         if ($this->checkUser($wxObject['openid'])) {
             $data['token'] = $this->getWxToken();
