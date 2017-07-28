@@ -232,4 +232,12 @@ class BaseController extends RestController
         }
     }
 
+    /**
+     * 根据token返回用户
+     */
+    protected function getUserByToken($token)
+    {
+        return $this->getUserModel()->where(array('token' => $token))->find();
+    }
+
 }

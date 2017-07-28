@@ -130,3 +130,76 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
 
+[ 2017-07-28T15:32:15+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `qiye_lessontype` [ RunTime:0.0096s ]
+SQL: INSERT INTO `qiye_lessontype` (`id`,`name`,`create_time`) VALUES ('2147483647','普通课程','1501227135') [ RunTime:0.0118s ]
+
+[ 2017-07-28T15:38:12+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000552s ]
+SQL: SHOW COLUMNS FROM `qiye_lesson` [ RunTime:0.0111s ]
+SQL: INSERT INTO `qiye_lesson` (`id`,`typeid`,`title`,`author`,`description`,`cover`,`recommend`,`price`,`create_time`) VALUES ('2147483647','2147483647','雷军讲堂','雷军','雷军的课程','http://oqg59brw6.bkt.clouddn.com/%E9%9B%B7%E5%86%9B%E8%AE%B2%E5%BA%A7%E5%B0%81%E9%9D%A2.jpg','1','0','1501227492') [ RunTime:0.0135s ]
+
+[ 2017-07-28T15:46:46+08:00 ] ::1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000742s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `qiye_videos` [ RunTime:0.0186s ]
+SQL: INSERT INTO `qiye_videos` (`id`,`name`,`url`,`picture`,`lessonid`,`create_time`) VALUES ('2147483647','雷军讲堂音频','http://pic.qiyeclass.com/%E9%9B%B7%E5%86%9B%E8%AE%B2%E5%BA%A7.mp3','http://pic.qiyeclass.com/%E9%9B%B7%E5%86%9B.jpg','2147483647','2017-07-28 15:46:46') [ RunTime:0.0672s ]
+
+[ 2017-07-28T15:48:48+08:00 ] ::1 /qiye_lesson/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qiye_lesson` WHERE `recommend` = 1 LIMIT 1   [ RunTime:0.0307s ]
+SQL: SELECT * FROM `qiye_lesson` WHERE `recommend` = 1 LIMIT 0,10   [ RunTime:0.0433s ]
+SQL: SELECT * FROM `qiye_lessontype`  [ RunTime:0.0170s ]
+
+[ 2017-07-28T15:51:39+08:00 ] ::1 /qiye_lesson/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qiye_lesson` WHERE `recommend` = 1 LIMIT 1   [ RunTime:0.1358s ]
+SQL: SELECT * FROM `qiye_lesson` WHERE `recommend` = 1 LIMIT 0,10   [ RunTime:0.0286s ]
+SQL: SELECT * FROM `qiye_lessontype`  [ RunTime:0.0876s ]
+
+[ 2017-07-28T15:52:02+08:00 ] ::1 /qiye_lesson/all
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `qiye_lesson` WHERE `recommend` = 1 LIMIT 1   [ RunTime:0.0508s ]
+SQL: SELECT * FROM `qiye_lesson` WHERE `recommend` = 1 LIMIT 0,10   [ RunTime:0.0621s ]
+SQL: SELECT * FROM `qiye_lessontype`  [ RunTime:0.0229s ]
+
+[ 2017-07-28T15:53:36+08:00 ] ::1 /qiye_lesson/lesson/2147483647
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000354s ]
+SQL: SELECT * FROM `qiye_lesson` WHERE `id` = 2147483647 LIMIT 1   [ RunTime:0.0229s ]
+SQL: SELECT * FROM `qiye_videos` WHERE `lessonid` = 2147483647  [ RunTime:0.0450s ]
+

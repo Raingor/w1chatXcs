@@ -33,9 +33,10 @@ class LessonController extends BaseController
                     }
                 }
             }
-            $lessons['totalCount'] = $lessonCount;
-            $lessons['pageIndex'] = $pageIndex;
-            $this->response($lessons);
+            $resData['lessons'] = $lessons;
+            $resData['totalCount'] = $lessonCount;
+            $resData['pageIndex'] = $pageIndex;
+            $this->response($resData);
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
     }
@@ -81,6 +82,17 @@ class LessonController extends BaseController
         if ($method == 'get') {
             $where['lessonid'] = $lessonid;
             $lesson = $this->getLessonModel()->find($lessonid);
+            //判断课程是否免费
+//            if ($lesson['price'] != 0) {
+//                $token = I('get.token');
+//                $user = $this->getUserByToken($token);
+//                $payLog = $this->getPaylogModel()->where(array('uid' => $user['id'], 'lessonid' => $lessonid))->find();
+//                //如果没有购买的历史就进行支付
+//                if (!$payLog) {
+//                    $util = new UtilController();
+//                    $util->wxPay($token, $lessonid);
+//                }
+//            }
             $videos = $this->getVideosModel()->where($where)->select();
             $return['lesson'] = $lesson;
             $return['videos'] = $videos;
