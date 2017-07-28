@@ -32,8 +32,10 @@ class UserController extends BaseController
             }
             $data['token'] = $this->getWxToken();
             $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
-            $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->fetchSql(true)->save($data);
-            file_put_contents('loginLog.txt', 'sql' . $id . ';' . date('Y-m-d H:i:s'), FILE_APPEND);
+            $data['update_time'] = date('Y-m-d H:i:s');
+            $sql = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->fetchSql(true)->save($data);
+            file_put_contents('loginLog.txt', 'sql:' . $sql . ';' . date('Y-m-d H:i:s'), FILE_APPEND);
+            dump($sql);
             $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->save($data);
         } else {
             if ($wxObject['openid'] != null) {
