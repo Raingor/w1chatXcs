@@ -21,10 +21,11 @@ class UserController extends BaseController
 //        $search = array("APPID", 'SECRET', 'JSCODE');
 //        $replace = array($this->getAppid(), $this->getAppsecret(), $code);
 //        $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
+        dump('code-----' . $code);
         $url = 'https://api.weixin.qq.com/sns/jscode2session?appid=wx6fc5f4836fc51f82&secret=aab9cf6c1f3de3f225d787afb097e40d&js_code=' . $code . '&grant_type=authorization_code';
 
         $wxObject = sendPost($url);
-
+        dump('wxObject:' . $wxObject);
         //判断用户是否存在
         if ($this->checkUser($wxObject['openid'])) {
             $data['token'] = $this->getWxToken();
