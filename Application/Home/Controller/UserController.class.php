@@ -17,10 +17,10 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
-        dump('post:'.I('post.'));
-        dump('get:'.I('get.'));
-        dump('put:'.I('put.'));
-        dump('param:'.I('param.'));
+        dump('post:' . I('post.code'));
+        dump('get:' . I('get.code'));
+        dump('put:' . I('put.code'));
+        dump('param:' . I('param.code'));
         $code = $_POST['code'];
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
