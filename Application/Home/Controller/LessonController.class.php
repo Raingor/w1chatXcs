@@ -49,7 +49,8 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'get') {
             $lessonType = $this->getLessonTypeModel()->select();
-            $this->response($lessonType);
+            $returnData['lessonType'] = $lessonType;
+            $this->response($returnData);
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
     }

@@ -30,31 +30,25 @@ class UserController extends BaseController
             foreach ($wxObject as $key => $value) {
                 dump($key . '----' . $value);
             }
-            $data['token'] = $this->getWxToken();
-            $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
-            $data['update_time'] = date('Y-m-d H:i:s');
-            $sql = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->fetchSql(true)->save($data);
-            file_put_contents('loginLog.txt', 'sql:' . $sql . ';' . date('Y-m-d H:i:s'), FILE_APPEND);
-            dump($sql);
-            $id = $this->getUserModel()->where(array('openid' => $wxObject['openid']))->save($data);
+            $data['token'] = $this->updateTokenByOpenid($wxObject['openid']);
+            if ($data['token']) {
+                $this->response(array('token' => $data['token']));
+            } else {
+                $this->response($this->getFAIL(), 502, false);
+            }
         } else {
             if ($wxObject['openid'] != null) {
                 file_put_contents('loginLog.txt', $wxObject['openid'] . 'insert---' . date('Y-m-d H:i:s'), FILE_APPEND);
 
-                $data['id'] = time();
-                $data['openid'] = $wxObject['openid'];
-                $data['token'] = $this->getWxToken();
-                $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
-                $data['create_time'] = date('Y-m-d H:i:s');
-                $id = M('User')->add($data);
+                $data['token'] = $this->addUser($wxObject['openid']);
+                if ($data['token']) {
+                    $this->response(array('token' => $data['token']));
+                } else {
+                    $this->response($this->getFAIL(), 502, false);
+                }
             } else {
                 file_put_contents('loginLog.txt', $wxObject['openid'] . 'error---' . date('Y-m-d H:i:s'), FILE_APPEND);
             }
-        }
-        if ($id) {
-            $this->response(array('token' => $data['token']));
-        } else {
-            $this->response($this->getFAIL(), 502, false);
         }
     }
 
@@ -62,16 +56,15 @@ class UserController extends BaseController
      * 添加用户的功能
      */
     private
-    function add($openid)
+    function addUser($openid)
     {
         $data['id'] = time();
         $data['openid'] = $openid;
         $data['token'] = $this->getWxToken();
-        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('d') + 3));
+        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
         $data['create_time'] = date('Y-m-d H:i:s');
         $id = $this->getUserModel()->add($data);
         if ($id) {
-
             return $data['token'];
         }
         return false;
@@ -83,7 +76,8 @@ class UserController extends BaseController
     private function updateTokenByOpenid($openid)
     {
         $data['token'] = $this->getWxToken();
-        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('d') + 3));
+        $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
+        $data['update_time'] = date('Y-m-d H:i:s');
         $row = $this->getUserModel()->where(array('openid' => $openid))->save($data);
         if ($row) {
             return $data['token'];
