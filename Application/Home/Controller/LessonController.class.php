@@ -132,7 +132,8 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'get') {
             $video = $this->getVideosModel()->find($videoid);
-            $this->response($video);
+            $returnData['video'] = $video;
+            $this->response($returnData);
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
     }

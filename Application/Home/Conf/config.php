@@ -28,7 +28,7 @@ return array(
     'URL_PARAMS_BIND' => true, // URL变量绑定到Action方法参数
     'URL_ROUTER_ON' => true, // 是否开启URL路由
     'URL_ROUTE_RULES' => array(
-        'qiye_index/:id\d' => 'Index/index',
+        'qiye_index' => 'Index/index',
         'qiye_user/login' => 'User/wxLogin',//微信登录
         'qiye_lesson/allType' => 'Lesson/getAllType',//查询全部课程类型的接口
         'qiye_lesson/byType' => 'Lesson/getByType',//根据课程类型查询全部课程的接口

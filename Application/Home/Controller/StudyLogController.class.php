@@ -20,8 +20,8 @@ class StudyLogController extends BaseController
     {
         $method = $this->_method;
         if ($method == 'get') {
-            if (session('USER_LOGIN_SESSION')) {
-                $user = session('USER_LOGIN_SESSION');
+            if (I('get.token')) {
+                $user = $this->getUserByToken(I('get.token'));
                 $where['uid'] = $user['id'];
                 $pageIndex = I('get.p') ? I('get.p') : 1;
                 $studyLogCount = $this->getStudylogModel()->where($where)->count();
@@ -39,7 +39,7 @@ class StudyLogController extends BaseController
                 $studyLog['totalCount'] = $studyLogCount;
                 $this->response($studyLog);
             } else {
-                $this->response($this->getOBJECTNOTFOUNT(), 500, false);
+                $this->response($this->getNOLOGIN(), 300, false);
             }
         } else {
             $this->response($this->getPAGENOEXIT(), 404, false);
@@ -53,7 +53,7 @@ class StudyLogController extends BaseController
     {
         $method = $this->_method;
         if ($method == 'post') {
-            $user = session('USER_LOGIN_SESSION');
+            $user = $this->getUserByToken(I('post.token'));
             $in_studylog = I('post.');
             $in_studylog['id'] = time() . rand(0, 9);
             $in_studylog['uid'] = $user['id'];

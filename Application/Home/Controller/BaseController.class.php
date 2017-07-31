@@ -14,6 +14,7 @@ class BaseController extends RestController
 {
     private $PAGE_NO_EXIT;
     private $OBJECT_NOT_FOUNT;
+    private $NO_LOGIN;
     private $SUCCESS;
     private $FAIL;
     private $userModel;
@@ -56,6 +57,15 @@ class BaseController extends RestController
     {
         return $this->PAGE_NO_EXIT = array('msg' => '找不到页面啦');
     }
+
+    /**
+     * @return mixed
+     */
+    public function getNOLOGIN()
+    {
+        return $this->NO_LOGIN = array('msg'=>'未登录');
+    }
+
 
     /**
      * @return array
@@ -183,7 +193,7 @@ class BaseController extends RestController
      */
     public function getMchKey()
     {
-        return $this->mch_secret = 'zengdazengbiaozengmenglixiaoxiao';
+        return $this->mch_key = 'zengdazengbiaozengmenglixiaoxiao';
     }
 
 
