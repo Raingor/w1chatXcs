@@ -94,6 +94,7 @@ class Qiniu
         );
         $result = $this->qiniu->upload($this->config, $upfile);
         $url = $this->qiniu->downlink($key);
+        $file['info'] = $this->qiniu->info($key);
         $file['url'] = $url;
         return false === $result ? false : true;
     }

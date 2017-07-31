@@ -16,8 +16,10 @@ class UtilController extends BaseController
     /**
      * 小程序统一下单
      */
-    public function wxPay($token, $lessonid)
+    public function wxPay()
     {
+        $token = I('post.token');
+        $lessonid = I('post.lessonid');
         $user = $this->getUserByToken($token);
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
