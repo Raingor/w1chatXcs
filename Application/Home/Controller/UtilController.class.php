@@ -25,13 +25,13 @@ class UtilController extends BaseController
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['body'] = "企业公开课";
-        $payParam['sign'] = $this->MakeSign($payParam);
         $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'];
         $payParam['total_fee'] = 1;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
-        $payParam['notify_url'] = 'http://demo.qiyeclass.com' . U('notifyPay');
+        $payParam['notify_url'] = 'http://demo.qiyeclass.com/' . U('notifyPay');
         $payParam['trade_type'] = 'JSAPI';
         $payParam['openid'] = $user['openid'];
+        $payParam['sign'] = $this->MakeSign($payParam, $this->getMchKey());
         $xml = $this->ToXml($payParam);
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
@@ -203,7 +203,7 @@ class UtilController extends BaseController
         $jsapi['nonceStr'] = $this->getNonceStr(32);
         $jsapi['package'] = "prepay_id=" . $UnifiedOrderResult['prepay_id'];
         $jsapi['signType'] = "MD5";
-        $jsapi['paySign'] = $this->MakeSign($jsapi);
+        $jsapi['paySign'] = $this->MakeSign($jsapi, $this->getMchKey());
         $parameters = json_encode($jsapi);
         return $parameters;
     }
@@ -228,13 +228,13 @@ class UtilController extends BaseController
      * 生成签名
      * @return 签名，本函数不覆盖sign成员变量，如要设置签名需要调用SetSign方法赋值
      */
-    public function MakeSign($params)
+    public function MakeSign($params, $key)
     {
         //签名步骤一：按字典序排序参数
         ksort($params);
         $string = $this->ToUrlParams($params);
         //签名步骤二：在string后加入KEY
-        $string = $string . "&key=" . $this->getMchKey();
+        $string = $string . "&key=" . $key;
         //签名步骤三：MD5加密
         $string = md5($string);
         //签名步骤四：所有字符转为大写
