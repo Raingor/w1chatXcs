@@ -31,18 +31,16 @@ class UtilController extends BaseController
         $payParam['notify_url'] = 'http://demo.qiyeclass.com/' . U('notifyPay');
         $payParam['trade_type'] = 'JSAPI';
         $payParam['openid'] = $user['openid'];
-        $payParam['sign'] = $this->MakeSign($payParam, $this->getMchKey());
+        $payParam['sign'] = $this->MakeSign($payParam, $this->getMchKey());//微信統一下單，簽名的生成 統一放到最後
         $xml = $this->ToXml($payParam);
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
-        $result['param'] = $payParam;
-        $this->response($result);
-//        if ($result['return_code'] == 'SUCCESS') {
-//            $data['parameters'] = $this->GetJsApiParameters($result);
-//            $this->response($data);
-//        } else {
-//            $this->response($this->getOBJECTNOTFOUNT(), 500, false);
-//        }
+        if ($result['return_code'] == 'SUCCESS') {
+            $data['parameters'] = $this->GetJsApiParameters($result);
+            $this->response($data);
+        } else {
+            $this->response($this->getOBJECTNOTFOUNT(), 500, false);
+        }
     }
 
     /**
