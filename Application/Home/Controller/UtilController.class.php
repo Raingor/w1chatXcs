@@ -35,7 +35,7 @@ class UtilController extends BaseController
         $xml = $this->ToXml($payParam);
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
-        $result['sign'] = $payParam['sign'];
+        $result['param'] = $payParam;
         $this->response($result);
 //        if ($result['return_code'] == 'SUCCESS') {
 //            $data['parameters'] = $this->GetJsApiParameters($result);
@@ -222,6 +222,7 @@ class UtilController extends BaseController
         $str .= '&timeStamp=' . $param['timeStamp'];
         $str .= '&key=' . $this->getMchKey();
         $paySign = md5($str);
+        $paySign = strtoupper($paySign);
         return $paySign;
     }
 }
