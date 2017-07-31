@@ -25,7 +25,7 @@ class UtilController extends BaseController
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['body'] = "企业公开课";
-        $payParam['sign'] = $this->buildSign($payParam);
+        $payParam['sign'] = $this->MakeSign($payParam);
         $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'];
         $payParam['total_fee'] = 1;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
