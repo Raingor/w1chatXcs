@@ -200,7 +200,7 @@ class RestController extends Controller
         if (empty($data)) return '';
         if ('json' == $type) {
             // 返回JSON数据格式到客户端 包含状态信息
-            $data = json_encode($data, JSON_UNESCAPED_UNICODE);
+            $data = json_encode($data);
         } elseif ('xml' == $type) {
             // 返回xml格式数据
             $data = xml_encode($data);
