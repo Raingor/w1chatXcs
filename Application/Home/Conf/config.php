@@ -11,7 +11,7 @@ return array(
     'DB_PREFIX' => 'qiye_', // 数据库表前缀
     'DB_FIELDS_CACHE' => true, // 启用字段缓存
     'DB_CHARSET' => 'utf8', // 数据库编码默认采用utf8
-    'DB_DEBUG'  			=>  TRUE, // 数据库调试模式 开启后可以记录SQL日志
+    'DB_DEBUG' => TRUE, // 数据库调试模式 开启后可以记录SQL日志
 
     'UPLOAD_SITEIMG_QINIU' => array(
         'maxSize' => 5 * 1024 * 1024,//文件大小
@@ -34,6 +34,8 @@ return array(
         'qiye_lesson/byType/:typeid\d' => 'Lesson/getByType',//根据课程类型查询全部课程的接口
         'qiye_lesson/lesson/:lessonid\d' => 'Lesson/getLessonById',//查询课程下的全部视频音频的接口
         'qiye_lesson/add' => 'Lesson/add',//添加课程的接口
+        'qiye_lesson_all' => 'Lesson/getAll',//查询全部推荐课程的接口
+
         'qiye_lessonType/add' => 'Lesson/addType',//添加课程类型的方法
         'qiye_lesson/search/' => 'Lesson/searchByKey',//根据关键字查询 课程
         'qiye_payLog/ByUser' => 'PayLog/getPayLogByUser',//根据用户返回消费记录
