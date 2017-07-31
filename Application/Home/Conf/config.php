@@ -3,7 +3,7 @@ return array(
     //'配置项'=>'配置值'
     /* 数据库设置 */
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => 'localhost', // 服务器地址
+    'DB_HOST' => '120.76.157.25', // 服务器地址
     'DB_NAME' => 'demo', // 数据库名
     'DB_USER' => 'rong', // 用户名
     'DB_PWD' => 'rong123', // 密码
@@ -15,14 +15,13 @@ return array(
 
     'UPLOAD_SITEIMG_QINIU' => array(
         'maxSize' => 5 * 1024 * 1024,//文件大小
-        'rootPath' => './',
-        'saveName' => array('uniqid', ''),
+        'saveName' => time(),
         'driver' => 'Qiniu',
         'driverConfig' => array(
-            'accessKey' => 'aaaaa',
-            'secretKey' => 'bbbbb-WlUl-',
-            'domain' => 'xxxxx.bkt.clouddn.com',
-            'bucket' => 'image',
+            'accessKey' => 'nu5CDv3gysBpE4OLGwexvxjjmDuNzI6SfSdaDQau',
+            'secretKey' => 'BD15tY1oaNNOYoPlFBYp5L0tQEivCVosvfS6cn86',
+            'domain' => 'pic.qiyeclass.com',
+            'bucket' => 'qiyeclass',
         )
     ),
     'URL_PARAMS_BIND' => true, // URL变量绑定到Action方法参数

@@ -12,9 +12,13 @@ class IndexController extends BaseController
         if (IS_POST) {
             $config = C('UPLOAD_SITEIMG_QINIU');
             $upload = new Qiniu($config['driverConfig']);
-            $info = $upload->save($_FILES);
-            dump($info);
-            dump($upload->getError());
+            $info = $upload->save($_FILES['file']);
+            if ($info) {
+                dump($_FILES['file']['name'] . '上传成功');
+            } else {
+                dump($upload->getError());
+
+            }
         }
         $this->display();
     }
