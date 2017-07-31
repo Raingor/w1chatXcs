@@ -53,22 +53,21 @@ class StudyLogController extends BaseController
      */
     public function add()
     {
-        $this->response(I('post.'));
-//        $method = $this->_method;
-//        if ($method == 'post') {
-//            $user = $this->getUserByToken(I('get.token'));
-//            $in_studylog = I('get.');
-//            $in_studylog['uid'] = $user['id'];
-//            $in_studylog['create_time'] = date('Y-m-d H:i:s');
-//            $out_studylog = $this->getStudylogModel()->add($in_studylog);
-//            if ($out_studylog) {
-//                $this->response($this->getSUCCESS());
-//            } else {
-//                $this->response($this->getFAIL(), 502, false);
-//            }
-//        } else {
-//            $this->response($this->getPAGENOEXIT(), 404, false);
-//        }
+        $method = $this->_method;
+        if ($method == 'post') {
+            $user = $this->getUserByToken(I('get.token'));
+            $in_studylog = I('get.');
+            $in_studylog['uid'] = $user['id'];
+            $in_studylog['create_time'] = date('Y-m-d H:i:s');
+            $out_studylog = $this->getStudylogModel()->add($in_studylog);
+            if ($out_studylog) {
+                $this->response($this->getSUCCESS());
+            } else {
+                $this->response($this->getFAIL(), 502, false);
+            }
+        } else {
+            $this->response($this->getPAGENOEXIT(), 404, false);
+        }
     }
 
 }

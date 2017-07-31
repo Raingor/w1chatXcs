@@ -117,8 +117,8 @@ class LessonController extends BaseController
     public function add()
     {
         $method = $this->_method;
-        if ($method == 'get') {
-            $data = I('get.');
+        if ($method == 'post') {
+            $data = I('post.');
             $data['create_time'] = time();
             $id = $this->getLessonModel()->add($data);
             if ($id) {
@@ -154,8 +154,8 @@ class LessonController extends BaseController
     public function addType()
     {
         $method = $this->_method;
-        if ($method == 'get') {
-            $data = I('get.');
+        if ($method == 'post') {
+            $data = I('post.');
             $data['create_time'] = time();
             $id = $this->getLessonTypeModel()->add($data);
             if ($id) {

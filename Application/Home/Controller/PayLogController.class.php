@@ -18,9 +18,9 @@ class PayLogController extends BaseController
     public function add()
     {
         $method = $this->_method;
-        if ($method == 'get') {
-            $user = $this->getUserByToken(I('get.token'));
-            $data = I('get.');
+        if ($method == 'post') {
+            $user = $this->getUserByToken(I('post.token'));
+            $data = I('post.');
             $data['uid'] = $user['id'];
             $data['paytime'] = time();
             $id = $this->getPaylogModel()->add($data);

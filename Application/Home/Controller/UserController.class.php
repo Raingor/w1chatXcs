@@ -17,7 +17,7 @@ class UserController extends BaseController
      */
     public function wxLogin()
     {
-        $code = I('param.code');
+        $code = I('post.code');
         $search = array("APPID", 'SECRET', 'JSCODE');
         $replace = array($this->getAppid(), $this->getAppsecret(), $code);
         $url = str_replace($search, $replace, $this->getWxGetOpenUrl());
