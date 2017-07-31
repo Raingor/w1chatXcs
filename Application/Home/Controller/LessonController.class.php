@@ -66,10 +66,11 @@ class LessonController extends BaseController
             $pageIndex = I('get.p') ? I('get.p') : 1;
             $lessonCount = $this->getLessonModel()->where($where)->count();
             $lessons = $this->getLessonModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->select();
-            $lessons['totalCount'] = $lessonCount;
-            $lessons['pageIndex'] = $pageIndex;
-            $lessons['typeid'] = $typeid;
-            $this->response($lessons);
+            $returnData['lessons'] = $lessons;
+            $returnData['totalCount'] = $lessonCount;
+            $returnData['pageIndex'] = $pageIndex;
+            $returnData['typeid'] = $typeid;
+            $this->response($returnData);
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
     }
@@ -111,7 +112,7 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'post') {
             $data = I('post.');
-            $data['id'] = time() . rand(0, 9);
+            $data['id'] = time() + rand(0, 999);
             $data['create_time'] = time();
             $id = $this->getLessonModel()->add($data);
             if ($id) {
@@ -144,7 +145,7 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'post') {
             $data = I('post.');
-            $data['id'] = time() . rand(0, 9);
+            $data['id'] = time() + rand(0, 999);
             $data['create_time'] = time();
             $id = $this->getLessonTypeModel()->add($data);
             if ($id) {
