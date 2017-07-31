@@ -3,7 +3,7 @@ return array(
     //'配置项'=>'配置值'
     /* 数据库设置 */
     'DB_TYPE' => 'mysql', // 数据库类型
-    'DB_HOST' => '120.76.157.25', // 服务器地址
+    'DB_HOST' => 'localhost', // 服务器地址
     'DB_NAME' => 'demo', // 数据库名
     'DB_USER' => 'rong', // 用户名
     'DB_PWD' => 'rong123', // 密码
@@ -19,9 +19,9 @@ return array(
         'saveName' => array('uniqid', ''),
         'driver' => 'Qiniu',
         'driverConfig' => array(
-            'accessKey' => 'kPuyJEzFaOmbAqDlOGOQoHwVsEe2qiMgvfUAmfeu',
-            'secretKey' => '9tbS9EB4F5FIRutfGIYrz_ipH5kW7aHKWC-WlUl-',
-            'domain' => 'otn2iqc5h.bkt.clouddn.com',
+            'accessKey' => 'aaaaa',
+            'secretKey' => 'bbbbb-WlUl-',
+            'domain' => 'xxxxx.bkt.clouddn.com',
             'bucket' => 'image',
         )
     ),
