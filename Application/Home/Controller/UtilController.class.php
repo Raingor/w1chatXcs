@@ -199,8 +199,25 @@ class UtilController extends BaseController
         $jsapi['nonceStr'] = $this->getNonceStr(32);
         $jsapi['package'] = "prepay_id=" . $UnifiedOrderResult['prepay_id'];
         $jsapi['signType'] = "MD5";
+        $jsapi['paySign'] = $this->makePaySign($jsapi);
         $parameters = json_encode($jsapi);
         return $parameters;
     }
 
+    /**
+     * 生成支付签名
+     * @param $param
+     * @return string
+     */
+    private function makePaySign($param)
+    {
+        $str = 'appId=' . $param['appId'];
+        $str .= '&nonceStr=' . $param['nonceStr'];
+        $str .= '&package=' . $param['package'];
+        $str .= '&signType=' . $param['signType'];
+        $str .= '&timeStamp=' . $param['timeStamp'];
+        $str .= '&key=' . $this->getMchKey();
+        $paySign = md5($str);
+        return $paySign;
+    }
 }
