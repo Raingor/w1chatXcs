@@ -203,26 +203,43 @@ class UtilController extends BaseController
         $jsapi['nonceStr'] = $this->getNonceStr(32);
         $jsapi['package'] = "prepay_id=" . $UnifiedOrderResult['prepay_id'];
         $jsapi['signType'] = "MD5";
-        $jsapi['paySign'] = $this->makePaySign($jsapi);
+        $jsapi['paySign'] = $this->MakeSign($jsapi);
         $parameters = json_encode($jsapi);
         return $parameters;
     }
 
     /**
-     * 生成支付签名
-     * @param $param
-     * @return string
+     * 格式化参数格式化成url参数
      */
-    private function makePaySign($param)
+    public function ToUrlParams($params)
     {
-        $str = 'appId=' . $param['appId'];
-        $str .= '&nonceStr=' . $param['nonceStr'];
-        $str .= '&package=' . $param['package'];
-        $str .= '&signType=' . $param['signType'];
-        $str .= '&timeStamp=' . $param['timeStamp'];
-        $str .= '&key=' . $this->getMchKey();
-        $paySign = md5($str);
-        $paySign = strtoupper($paySign);
-        return $paySign;
+        $buff = "";
+        foreach ($params as $k => $v) {
+            if ($k != "sign" && $v != "" && !is_array($v)) {
+                $buff .= $k . "=" . $v . "&";
+            }
+        }
+
+        $buff = trim($buff, "&");
+        return $buff;
     }
+
+    /**
+     * 生成签名
+     * @return 签名，本函数不覆盖sign成员变量，如要设置签名需要调用SetSign方法赋值
+     */
+    public function MakeSign($params)
+    {
+        //签名步骤一：按字典序排序参数
+        ksort($params);
+        $string = $this->ToUrlParams($params);
+        //签名步骤二：在string后加入KEY
+        $string = $string . "&key=" . $this->getMchKey();
+        //签名步骤三：MD5加密
+        $string = md5($string);
+        //签名步骤四：所有字符转为大写
+        $result = strtoupper($string);
+        return $result;
+    }
+
 }
