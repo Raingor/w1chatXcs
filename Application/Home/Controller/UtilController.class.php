@@ -24,8 +24,8 @@ class UtilController extends BaseController
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
-        $payParam['sign'] = $this->buildSign($payParam);
         $payParam['body'] = "企业公开课";
+        $payParam['sign'] = $this->buildSign($payParam);
         $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'];
         $payParam['total_fee'] = 1;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
@@ -35,6 +35,7 @@ class UtilController extends BaseController
         $xml = $this->ToXml($payParam);
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
+        $result['sign'] = $payParam['sign'];
         $this->response($result);
 //        if ($result['return_code'] == 'SUCCESS') {
 //            $data['parameters'] = $this->GetJsApiParameters($result);
@@ -93,9 +94,11 @@ class UtilController extends BaseController
      */
     private function buildSign($param)
     {
-        $str = 'appid=APPID&mch_id=MCH_ID';
-        $str = str_replace(array('APPID', 'MCH_ID'), array($param['appid'], $param['mch_id']), $str);
-        $str = $str . '&key=' . $this->getMchKey();
+        $str = 'appid=' . $param['appid'];
+        $str .= '&body=' . $param['body'];
+        $str .= '&mch_id=' . $param['mch_id'];
+        $str .= '&nonce_str=' . $param['nonce_str'];
+        $str .= '&key=' . $this->getMchKey();
         $sign = md5($str);
         $sign = strtoupper($sign);
         return $sign;
