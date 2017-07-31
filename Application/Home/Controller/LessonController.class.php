@@ -98,11 +98,7 @@ class LessonController extends BaseController
             $videos = $this->getVideosModel()->where($where)->select();
             $return['lesson'] = $lesson;
             $return['videos'] = $videos;
-            if (I('get.token')) {
-                $this->response($return);
-            } else {
-                $this->response($return, 300, false);
-            }
+            $this->response($return);
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
 

@@ -14,21 +14,11 @@
 默认头像 <img src="__PUBLIC__/img/headimg.png" alt=""><input type="text" value="__PUBLIC__/img/headimg.png">
 
 <hr>
-<h1>添加课程</h1>
-类型<select name="typeid" id="">
-    <volist id="vo" name="lessontype">
-        <option value="{$vo['id']}">{$vo['name']}</option>
-    </volist>
-</select>
-<br>
-标题 <input type="text" name="title"><br>
-演讲者 <input type="text" name="author"><br>
-描述 <textarea name="description" cols="30" rows="10"></textarea><br>
-封面 <input type="file" name="cover"><br>
-音频头像 <input type="file" name="audio_headimg"><br>
-视频头像 <input type="file" name="video_headimg"><br>
-是否推荐 <input type="radio" name="recommend" checked value="1">是 <input type="radio" name="recommend" value="0">否 <br>
-价格 <input type="text" name="price" value="0"><br>
-<input type="submit" value="添加">
+<form action="{:U('Util/wxpay')}" method="post">
+    <input type="text" name="lessonid" value="1">
+    <input type="text" name="token" value="726a5a7e1e999d4c10dbcbc1d04a0fb9">
+    <input type="submit" value="支付">
+</form>
+
 </body>
 </html>
