@@ -35,12 +35,13 @@ class UtilController extends BaseController
         $xml = $this->ToXml($payParam);
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
-        if ($result['return_code'] == 'SUCCESS') {
-            $data['parameters'] = $this->GetJsApiParameters($result);
-            $this->response($data);
-        } else {
-            $this->response($this->getOBJECTNOTFOUNT(), 500, false);
-        }
+        $this->response($result);
+//        if ($result['return_code'] == 'SUCCESS') {
+//            $data['parameters'] = $this->GetJsApiParameters($result);
+//            $this->response($data);
+//        } else {
+//            $this->response($this->getOBJECTNOTFOUNT(), 500, false);
+//        }
     }
 
     /**
