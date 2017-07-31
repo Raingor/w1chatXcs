@@ -41,28 +41,28 @@ class PayLogController extends BaseController
     {
         $method = $this->_method;
         if ($method == 'get') {
-            if (I('get.token')) {
 
-                $user = $this->getUserByToken(I('get.token'));
-                $where['uid'] = $user['id'];
-                $pageIndex = I('get.p') ? I('get.p') : 1;
-                $paylogsCount = $this->getPaylogModel()->where($where)->count();
-                $paylogs = $this->getPaylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->select();
-                $lessons = $this->getLessonModel()->select();
-                foreach ($paylogs as $key => $value) {
-                    foreach ($lessons as $k => $v) {
-                        if ($v['id'] == $value['lessonid']) {
-                            $paylogs[$key]['lesson'] = $lessons[$k];
-                            break;
-                        }
+            $user = $this->getUserByToken(I('get.token'));
+            $where['uid'] = $user['id'];
+            $pageIndex = I('get.p') ? I('get.p') : 1;
+            $paylogsCount = $this->getPaylogModel()->where($where)->count();
+            $paylogs = $this->getPaylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->select();
+            $lessons = $this->getLessonModel()->select();
+            foreach ($paylogs as $key => $value) {
+                foreach ($lessons as $k => $v) {
+                    if ($v['id'] == $value['lessonid']) {
+                        $paylogs[$key]['lesson'] = $lessons[$k];
+                        break;
                     }
                 }
-                $resturnData['paylogs'] = $paylogs;
-                $resturnData['totalCount'] = $paylogsCount;
-                $resturnData['pageIndex'] = $pageIndex;
-                $this->response($resturnData);
+            }
+            $returnData['paylogs'] = $paylogs;
+            $returnData['totalCount'] = $paylogsCount;
+            $returnData['pageIndex'] = $pageIndex;
+            if (I('get.token')) {
+                $this->response($returnData);
             } else {
-                $this->response($this->getNOLOGIN(), 300);
+                $this->response($returnData, 300);
             }
         } else {
             $this->response($this->getPAGENOEXIT(), 404, false);

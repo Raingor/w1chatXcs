@@ -99,7 +99,11 @@ class LessonController extends BaseController
             $videos = $this->getVideosModel()->where($where)->select();
             $return['lesson'] = $lesson;
             $return['videos'] = $videos;
-            $this->response($return);
+            if (I('get.token')) {
+                $this->response($return);
+            } else {
+                $this->response($return, 300);
+            }
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
 
@@ -134,7 +138,11 @@ class LessonController extends BaseController
         if ($method == 'get') {
             $video = $this->getVideosModel()->find($videoid);
             $returnData['video'] = $video;
-            $this->response($returnData);
+            if (I('get.token')) {
+                $this->response($returnData);
+            } else {
+                $this->response($returnData, 300);
+            }
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
     }

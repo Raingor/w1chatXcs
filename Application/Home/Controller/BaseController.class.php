@@ -63,7 +63,7 @@ class BaseController extends RestController
      */
     public function getNOLOGIN()
     {
-        return $this->NO_LOGIN = array('msg'=>'未登录');
+        return $this->NO_LOGIN = array('msg' => '未登录');
     }
 
 
