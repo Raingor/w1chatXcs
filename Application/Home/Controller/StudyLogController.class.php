@@ -55,8 +55,11 @@ class StudyLogController extends BaseController
     {
         $method = $this->_method;
         if ($method == 'post') {
-            $user = $this->getUserByToken(I('get.token'));
-            $in_studylog = I('get.');
+            $user = $this->getUserByToken(I('post.token'));
+            if (!I('post.token')) {
+                $this->response($this->getSUCCESS());
+            }
+            $in_studylog = I('post.');
             $in_studylog['uid'] = $user['id'];
             $in_studylog['create_time'] = date('Y-m-d H:i:s');
             $out_studylog = $this->getStudylogModel()->add($in_studylog);
