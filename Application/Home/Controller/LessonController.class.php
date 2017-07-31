@@ -88,12 +88,14 @@ class LessonController extends BaseController
             //判断课程是否免费
             if ($lesson['price'] != 0) {
                 $token = I('get.token');
+                if ($token) {
+                    $this->response($this->getNOLOGIN(), 300, false);
+                }
                 $user = $this->getUserByToken($token);
                 $payLog = $this->getPaylogModel()->where(array('uid' => $user['id'], 'lessonid' => $lessonid))->find();
                 //如果没有购买的历史就进行支付
                 if (!$payLog) {
-                    $util = new UtilController();
-                    $util->wxPay($token, $lessonid);
+                    $this->response($this->getNOPAY(), 500, false);
                 }
             }
             $videos = $this->getVideosModel()->where($where)->select();
@@ -102,7 +104,7 @@ class LessonController extends BaseController
             if (I('get.token')) {
                 $this->response($return);
             } else {
-                $this->response($return, 300);
+                $this->response($return, 300, false);
             }
         }
         $this->response($this->getPAGENOEXIT(), 404, false);

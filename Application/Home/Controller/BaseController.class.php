@@ -15,6 +15,7 @@ class BaseController extends RestController
     private $PAGE_NO_EXIT;
     private $OBJECT_NOT_FOUNT;
     private $NO_LOGIN;
+    private $NO_PAY;
     private $SUCCESS;
     private $FAIL;
     private $userModel;
@@ -90,6 +91,15 @@ class BaseController extends RestController
     {
         return $this->FAIL = array('msg' => '操作失败');
     }
+
+    /**
+     * @return mixed
+     */
+    public function getNOPAY()
+    {
+        return $this->NO_PAY = array('msg' => '尚未购买');
+    }
+
 
     /**
      * @return mixed
