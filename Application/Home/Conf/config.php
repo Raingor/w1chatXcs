@@ -24,6 +24,7 @@ return array(
             'bucket' => 'qiyeclass',
         )
     ),
+
     'URL_PARAMS_BIND' => true, // URL变量绑定到Action方法参数
     'URL_ROUTER_ON' => true, // 是否开启URL路由
     'URL_ROUTE_RULES' => array(

@@ -55,7 +55,6 @@ class UserController extends BaseController
     private
     function addUser($openid)
     {
-        $data['id'] = time();
         $data['openid'] = $openid;
         $data['token'] = $this->getWxToken();
         $data['token_expiresIn'] = date('Y-m-d H:i:s', mktime(date('H'), date('i'), date('s'), date('m'), date('d') + 3));
