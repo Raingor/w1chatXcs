@@ -78,10 +78,11 @@ class LessonController extends BaseController
     /**
      * 根据指定的课程返回课程下的  视频音频
      */
-    public function getLessonById($lessonid)
+    public function getLessonById()
     {
         $method = $this->_method;
         if ($method == 'get') {
+            $lessonid = I('get.lessonid');
             $where['lessonid'] = $lessonid;
             $lesson = $this->getLessonModel()->find($lessonid);
             //判断课程是否免费
