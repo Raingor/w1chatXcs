@@ -60,9 +60,9 @@ class UtilController extends BaseController
                 $array = explode('and', $xmlarr['out_trade_no']);
                 $data['id'] = time() . rand(0, 9);
                 $data['uid'] = $array[1];
-                $data['paytime'] = time();
+                $data['paytime'] = date('Y-m-d H:i:s');
                 $data['lessonid'] = $array[0];
-                $lesson = M('lesson')->find($data['lessonid']);
+                $lesson = M('lesson')->find($array[0]);
                 $data['paymoney'] = $lesson['price'];
                 $id = M('paylog')->add($data);
                 if ($id) {

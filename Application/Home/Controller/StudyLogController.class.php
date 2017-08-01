@@ -24,7 +24,7 @@ class StudyLogController extends BaseController
             $where['uid'] = $user['id'];
             $pageIndex = I('get.p') ? I('get.p') : 1;
             $studyLogCount = $this->getStudylogModel()->where($where)->count();
-            $studyLog = $this->getStudylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->order('id desc')->select();
+            $studyLog = $this->getStudylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->order('create_time desc')->select();
             $lessons = $this->getLessonModel()->select();
             foreach ($studyLog as $key => $value) {
                 foreach ($lessons as $k => $v) {
@@ -57,12 +57,18 @@ class StudyLogController extends BaseController
         if ($method == 'post') {
             $user = $this->getUserByToken(I('post.token'));
             if (!I('post.token')) {
-                $this->response($this->getSUCCESS());
+                $this->response($this->getNOLOGIN(), 300, false);
             }
             $in_studylog = I('post.');
             $in_studylog['uid'] = $user['id'];
-            $in_studylog['create_time'] = date('Y-m-d H:i:s');
-            $out_studylog = $this->getStudylogModel()->add($in_studylog);
+            $studyLog = $this->getStudylogModel()->where(array('uid' => $user['id'], 'lessonid' => $in_studylog['lessonid']))->find();
+            if ($studyLog) {
+                $studyLog['create_time'] = date('Y-m-d H:i:s');
+                $out_studylog = $this->getStudylogModel()->save($studyLog);
+            } else {
+                $in_studylog['create_time'] = date('Y-m-d H:i:s');
+                $out_studylog = $this->getStudylogModel()->add($in_studylog);
+            }
             if ($out_studylog) {
                 $this->response($this->getSUCCESS());
             } else {
