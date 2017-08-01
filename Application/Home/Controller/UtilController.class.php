@@ -36,8 +36,7 @@ class UtilController extends BaseController
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
         if ($result['return_code'] == 'SUCCESS') {
-            $data['parameters'] = $this->GetJsApiParameters($result);
-            $this->response($data);
+            $this->response($this->GetJsApiParameters($result));
         } else {
             $this->response($this->getOBJECTNOTFOUNT(), 500, false);
         }
@@ -196,14 +195,13 @@ class UtilController extends BaseController
         ) {
             exit("参数错误");
         }
-        $jsapi['appId'] = $UnifiedOrderResult["appid"];
+//        $jsapi['appId'] = $UnifiedOrderResult["appid"];
         $jsapi['timeStamp'] = time() . '';
         $jsapi['nonceStr'] = $this->getNonceStr(32);
         $jsapi['package'] = "prepay_id=" . $UnifiedOrderResult['prepay_id'];
         $jsapi['signType'] = "MD5";
         $jsapi['paySign'] = $this->MakeSign($jsapi, $this->getMchKey());
-        $parameters = json_encode($jsapi);
-        return $parameters;
+        return $jsapi;
     }
 
     /**
