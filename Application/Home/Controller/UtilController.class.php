@@ -21,14 +21,14 @@ class UtilController extends BaseController
         $token = I('post.token');
         $lessonid = I('post.lessonid');
         $user = $this->getUserByToken($token);
-        if (!$token||!$user) {
+        if (!$token || !$user) {
             $this->response($this->getNOLOGIN(), 300, false);
         }
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['body'] = "企业公开课";
-        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'];
+        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'].'and'.time();
         $payParam['total_fee'] = 1;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
         $payParam['notify_url'] = 'http://demo.qiyeclass.com/' . U('notifyPay');
@@ -39,7 +39,9 @@ class UtilController extends BaseController
         $result = $this->postXmlCurl($xml, $this->getWxPaymentUrl());
         $result = $this->FromXml($result);
         if ($result['return_code'] == 'SUCCESS') {
-            $this->response($result);
+            if ($result['result_code'] == 'FAIL') {
+                $this->response($result['err_code_des'], 502, false);
+            }
             $this->response($this->GetJsApiParameters($result));
         } else {
             $returnData['msg'] = $this->getOBJECTNOTFOUNT();
