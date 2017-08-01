@@ -54,28 +54,25 @@ class StudyLogController extends BaseController
     public function add()
     {
         $method = $this->_method;
-        if ($method == 'get') {
-            $user = $this->getUserByToken(I('get.token'));
-            if (!I('get.token')) {
-                $this->response($this->getNOLOGIN(), 300, false);
-            }
-            $in_studylog = I('get.');
-            $in_studylog['uid'] = $user['id'];
-            $studyLog = $this->getStudylogModel()->where(array('uid' => $user['id'], 'lessonid' => $in_studylog['lessonid']))->find();
-            if ($studyLog) {
-                $studyLog['create_time'] = date('Y-m-d H:i:s');
-                $out_studylog = $this->getStudylogModel()->save($studyLog);
-            } else {
-                $in_studylog['create_time'] = date('Y-m-d H:i:s');
-                $out_studylog = $this->getStudylogModel()->add($in_studylog);
-            }
-            if ($out_studylog) {
-                $this->response($this->getSUCCESS());
-            } else {
-                $this->response($this->getFAIL(), 502, false);
-            }
+
+        $user = $this->getUserByToken(I('param.token'));
+        if (!I('param.token')) {
+            $this->response($this->getNOLOGIN(), 300, false);
+        }
+        $in_studylog = I('get.');
+        $in_studylog['uid'] = $user['id'];
+        $studyLog = $this->getStudylogModel()->where(array('uid' => $user['id'], 'lessonid' => $in_studylog['lessonid']))->find();
+        if ($studyLog) {
+            $studyLog['create_time'] = date('Y-m-d H:i:s');
+            $out_studylog = $this->getStudylogModel()->save($studyLog);
         } else {
-            $this->response($this->getPAGENOEXIT(), 404, false);
+            $in_studylog['create_time'] = date('Y-m-d H:i:s');
+            $out_studylog = $this->getStudylogModel()->add($in_studylog);
+        }
+        if ($out_studylog) {
+            $this->response($this->getSUCCESS());
+        } else {
+            $this->response($this->getFAIL(), 502, false);
         }
     }
 
