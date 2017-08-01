@@ -53,12 +53,14 @@ class StudyLogController extends BaseController
      */
     public function add()
     {
-        $method = $this->_method;
-
-        $user = $this->getUserByToken(I('param.token'));
+        $return['request'] = I('request.token');
+        $return['param'] = I('param.token');
+        $return['get'] = I('get.token');
+        $this->response($return);
         if (!I('param.token')) {
             $this->response($this->getNOLOGIN(), 300, false);
         }
+        $user = $this->getUserByToken(I('param.token'));
         $in_studylog = I('get.');
         $in_studylog['uid'] = $user['id'];
         $studyLog = $this->getStudylogModel()->where(array('uid' => $user['id'], 'lessonid' => $in_studylog['lessonid']))->find();
