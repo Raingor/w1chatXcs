@@ -29,10 +29,8 @@ class UtilController extends BaseController
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['body'] = "企业公开课";
-//        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'] . 'and' . $lesson['price'];
-//        $payParam['total_fee'] = $lesson['price'] * 100;//分作单位
         $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'] . 'and' . $lesson['price'];
-        $payParam['total_fee'] = $lesson['price'];//分作单位
+        $payParam['total_fee'] = $lesson['price'] * 100;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
         $payParam['notify_url'] = 'http://demo.qiyeclass.com/' . U('notifyPay');
         $payParam['trade_type'] = 'JSAPI';
@@ -202,7 +200,7 @@ class UtilController extends BaseController
             || !array_key_exists("prepay_id", $UnifiedOrderResult)
             || $UnifiedOrderResult['prepay_id'] == ""
         ) {
-            exit("参数错误");
+            $this->response($data['msg'] = "订单已支付", 502, false);
         }
         $jsapi['appId'] = $UnifiedOrderResult["appid"];
         $jsapi['timeStamp'] = time() . '';
