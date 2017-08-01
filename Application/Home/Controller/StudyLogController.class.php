@@ -18,34 +18,29 @@ class StudyLogController extends BaseController
      */
     public function getByUid()
     {
-        $method = $this->_method;
-        if ($method == 'get') {
-            $user = $this->getUserByToken(I('get.token'));
-            $where['uid'] = $user['id'];
-            $pageIndex = I('get.p') ? I('get.p') : 1;
-            $studyLogCount = $this->getStudylogModel()->where($where)->count();
-            $studyLog = $this->getStudylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->order('create_time desc')->select();
-            $lessons = $this->getLessonModel()->select();
-            foreach ($studyLog as $key => $value) {
-                foreach ($lessons as $k => $v) {
-                    if ($v['id'] == $value['lessonid']) {
-                        $studyLog[$key]['lesson'] = $lessons[$k];
-                        break;
-                    }
+        $user = $this->getUserByToken(I('request.token'));
+        $where['uid'] = $user['id'];
+        $pageIndex = I('get.p') ? I('get.p') : 1;
+        $studyLogCount = $this->getStudylogModel()->where($where)->count();
+        $studyLog = $this->getStudylogModel()->where($where)->page(($pageIndex - 1) . ',' . $this->getPageSize())->order('create_time desc')->select();
+        $lessons = $this->getLessonModel()->select();
+        foreach ($studyLog as $key => $value) {
+            foreach ($lessons as $k => $v) {
+                if ($v['id'] == $value['lessonid']) {
+                    $studyLog[$key]['lesson'] = $lessons[$k];
+                    break;
                 }
             }
-            $returnData['studyLog'] = $studyLog;
-            $returnData['pageIndex'] = $pageIndex;
-            $returnData['totalCount'] = $studyLogCount;
-            if (I('get.token')) {
-                $this->response($returnData);
-            } else {
-                $this->response($returnData, 300);
-            }
-            $this->response($studyLog);
-        } else {
-            $this->response($this->getPAGENOEXIT(), 404, false);
         }
+        $returnData['studyLog'] = $studyLog;
+        $returnData['pageIndex'] = $pageIndex;
+        $returnData['totalCount'] = $studyLogCount;
+        if (I('get.token')) {
+            $this->response($returnData);
+        } else {
+            $this->response($returnData, 300);
+        }
+        $this->response($studyLog);
     }
 
     /**
@@ -53,10 +48,6 @@ class StudyLogController extends BaseController
      */
     public function add()
     {
-        $return['request'] = I('request.token');
-        $return['param'] = I('param.token');
-        $return['get'] = I('get.token');
-        $this->response($return);
         if (!I('param.token')) {
             $this->response($this->getNOLOGIN(), 300, false);
         }
