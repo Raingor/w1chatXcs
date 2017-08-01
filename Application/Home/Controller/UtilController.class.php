@@ -19,11 +19,11 @@ class UtilController extends BaseController
     public function wxPay()
     {
         $token = I('post.token');
-        if (!$token) {
-            $this->response($this->getNOLOGIN(), 300, false);
-        }
         $lessonid = I('post.lessonid');
         $user = $this->getUserByToken($token);
+        if (!$token||!$user) {
+            $this->response($this->getNOLOGIN(), 300, false);
+        }
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
