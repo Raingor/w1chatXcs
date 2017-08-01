@@ -95,7 +95,11 @@ class LessonController extends BaseController
                 if (!$payLog) {
 //                    没有购买则返回第一集
                     $returnData['msg'] = $this->getNOPAY();
-                    $returnData['video'] = $videos[0];
+                    for ($index = 1; $index < count($videos); $index++) {
+                        unset($videos[$index]['audio_url']);
+                        unset($videos[$index]['video_url']);
+                    }
+                    $returnData['videos'] = $videos;
                     $this->response($returnData, 500, false);
                 }
             }
