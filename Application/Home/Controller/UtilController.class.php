@@ -24,12 +24,15 @@ class UtilController extends BaseController
         if (!$token || !$user) {
             $this->response($this->getNOLOGIN(), 300, false);
         }
+        $lesson = $this->getLessonModel()->find($lessonid);
         $payParam['appid'] = $this->getAppid();
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['body'] = "企业公开课";
-        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'].'and'.time();
-        $payParam['total_fee'] = 1;//分作单位
+//        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'] . 'and' . $lesson['price'];
+//        $payParam['total_fee'] = $lesson['price'] * 100;//分作单位
+        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'] . 'and' . $lesson['price'];
+        $payParam['total_fee'] = $lesson['price'];//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
         $payParam['notify_url'] = 'http://demo.qiyeclass.com/' . U('notifyPay');
         $payParam['trade_type'] = 'JSAPI';
@@ -61,12 +64,10 @@ class UtilController extends BaseController
         if ($xmlarr['result_code'] == 'SUCCESS') {
             if ($xmlarr['out_trade_no']) {
                 $array = explode('and', $xmlarr['out_trade_no']);
-                $data['id'] = time() . rand(0, 9);
                 $data['uid'] = $array[1];
                 $data['paytime'] = date('Y-m-d H:i:s');
                 $data['lessonid'] = $array[0];
-                $lesson = M('lesson')->find($array[0]);
-                $data['paymoney'] = $lesson['price'];
+                $data['paymoney'] = $array[2];
                 $id = M('paylog')->add($data);
                 if ($id) {
                     $rt['return_code'] = "SUCCESS";
