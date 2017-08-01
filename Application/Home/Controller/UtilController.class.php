@@ -29,7 +29,7 @@ class UtilController extends BaseController
         $payParam['mch_id'] = $this->getMchid();
         $payParam['nonce_str'] = $this->getNonceStr(32);
         $payParam['body'] = "企业公开课";
-        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'] . 'and' . $lesson['price'];
+        $payParam['out_trade_no'] = $lessonid . 'and' . $user['id'] . 'and' . $lesson['price'] * 100;
         $payParam['total_fee'] = $lesson['price'] * 100;//分作单位
         $payParam['spbill_create_ip'] = $_SERVER['REMOTE_ADDR'];
         $payParam['notify_url'] = 'http://demo.qiyeclass.com/' . U('notifyPay');
@@ -65,7 +65,7 @@ class UtilController extends BaseController
                 $data['uid'] = $array[1];
                 $data['paytime'] = date('Y-m-d H:i:s');
                 $data['lessonid'] = $array[0];
-                $data['paymoney'] = $array[2];
+                $data['paymoney'] = $array[2] / 100;
                 $id = M('paylog')->add($data);
                 if ($id) {
                     $rt['return_code'] = "SUCCESS";
