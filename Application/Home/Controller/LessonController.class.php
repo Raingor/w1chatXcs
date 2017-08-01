@@ -85,6 +85,7 @@ class LessonController extends BaseController
             $lessonid = I('get.lessonid');
             $where['lessonid'] = $lessonid;
             $lesson = $this->getLessonModel()->find($lessonid);
+            $videos = $this->getVideosModel()->where($where)->select();
             //判断课程是否免费
             if ($lesson['price'] != 0) {
                 $token = I('get.token');
@@ -92,10 +93,12 @@ class LessonController extends BaseController
                 $payLog = $this->getPaylogModel()->where(array('uid' => $user['id'], 'lessonid' => $lessonid))->find();
                 //如果没有购买的历史就进行支付
                 if (!$payLog) {
-                    $this->response($this->getNOPAY(), 500, false);
+//                    没有购买则返回第一集
+                    $returnData['msg'] = $this->getNOPAY();
+                    $returnData['video'] = $videos[0];
+                    $this->response($returnData, 500, false);
                 }
             }
-            $videos = $this->getVideosModel()->where($where)->select();
             $return['lesson'] = $lesson;
             $return['videos'] = $videos;
             $this->response($return);
