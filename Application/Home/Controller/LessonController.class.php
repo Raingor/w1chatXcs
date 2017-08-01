@@ -86,6 +86,8 @@ class LessonController extends BaseController
             $where['lessonid'] = $lessonid;
             $lesson = $this->getLessonModel()->find($lessonid);
             $videos = $this->getVideosModel()->where($where)->select();
+            $returnData['lesson'] = $lesson;
+            $returnData['videos'] = $videos;
             //判断课程是否免费
             if ($lesson['price'] != 0) {
                 $token = I('get.token');
@@ -100,12 +102,9 @@ class LessonController extends BaseController
                         unset($videos[$index]['video_url']);
                     }
                     $returnData['videos'] = $videos;
-                    $this->response($returnData, 500, false);
                 }
             }
-            $return['lesson'] = $lesson;
-            $return['videos'] = $videos;
-            $this->response($return);
+            $this->response($returnData);
         }
         $this->response($this->getPAGENOEXIT(), 404, false);
 
