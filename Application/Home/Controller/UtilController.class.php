@@ -200,7 +200,7 @@ class UtilController extends BaseController
         ) {
             exit("参数错误");
         }
-//        $jsapi['appId'] = $UnifiedOrderResult["appid"];
+        $jsapi['appId'] = $UnifiedOrderResult["appid"];
         $jsapi['timeStamp'] = time() . '';
         $jsapi['nonceStr'] = $this->getNonceStr(32);
         $jsapi['package'] = "prepay_id=" . $UnifiedOrderResult['prepay_id'];
