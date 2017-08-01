@@ -19,6 +19,9 @@ class UtilController extends BaseController
     public function wxPay()
     {
         $token = I('post.token');
+        if (!$token) {
+            $this->response($this->getNOLOGIN(), 300, false);
+        }
         $lessonid = I('post.lessonid');
         $user = $this->getUserByToken($token);
         $payParam['appid'] = $this->getAppid();
