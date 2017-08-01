@@ -38,7 +38,9 @@ class UtilController extends BaseController
         if ($result['return_code'] == 'SUCCESS') {
             $this->response($this->GetJsApiParameters($result));
         } else {
-            $this->response($this->getOBJECTNOTFOUNT(), 500, false);
+            $returnData['msg'] = $this->getOBJECTNOTFOUNT();
+            $returnData['error'] = $result;
+            $this->response($result, 500, false);
         }
     }
 
