@@ -33,9 +33,8 @@ class IndexController extends BaseController
             }
 
         } else {
-            dump($this->getNonceStr(32));
-            $lessonType = $this->getLessonTypeModel()->select();
-            $this->assign('lessontype', $lessonType);
+            $lesson = $this->getLessonModel()->select();
+            $this->assign('lesson', $lesson);
             $this->display();
         }
     }

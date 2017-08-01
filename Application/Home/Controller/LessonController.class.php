@@ -118,7 +118,7 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'post') {
             $data = I('post.');
-            $data['create_time'] = time();
+            $data['create_time'] = date('Y-m-d H:i:d');
             $id = $this->getLessonModel()->add($data);
             if ($id) {
                 $this->response($this->getSUCCESS());
@@ -155,7 +155,7 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'post') {
             $data = I('post.');
-            $data['create_time'] = time();
+            $data['create_time'] = date('Y-m-d H:i:s');
             $id = $this->getLessonTypeModel()->add($data);
             if ($id) {
                 $this->response($this->getSUCCESS());
@@ -175,9 +175,11 @@ class LessonController extends BaseController
         $method = $this->_method;
         if ($method == 'get') {
             $key = I('get.key');
+            $key = trim($key);
             $pageIndex = I('get.p') ? I('get.p') : 1;
             $where['title'] = array('like', "%$key%");
             $where['author'] = array('like', "%$key%");
+
             $lessonsCount = $this->getLessonModel()->where($where)->count();
             $lessons = $this->getLessonModel()->where($where)->page($pageIndex . ',' . $this->getPageSize())->select();
             $return['totalCount'] = $lessonsCount;
@@ -186,5 +188,24 @@ class LessonController extends BaseController
             $this->response($return);
         }
 
+    }
+
+    /**
+     * 添加视频
+     */
+    public function addVideo()
+    {
+        $method = $this->_method;
+        if ($method == 'post') {
+            $data = I('post.');
+            $data['create_time'] = date('Y-m-d H:i:s');
+            $id = $this->getVideosModel()->add($data);
+            if ($id) {
+                $this->response($this->getSUCCESS());
+            } else {
+                $this->response($this->getFAIL(), 502, false);
+            }
+        }
+        $this->response($this->getPAGENOEXIT(), 404, false);
     }
 }

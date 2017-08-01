@@ -5,20 +5,70 @@
     <title>Title</title>
 </head>
 <body>
-<form action="" enctype="multipart/form-data" method="post">
-    类型图片：<input type="file" name="file"><br/>
-    类型名: <input type="text" name="name"><br/>
-    <input type="submit" value="提交">
-</form>
-<hr>
-默认头像 <img src="__PUBLIC__/img/headimg.png" alt=""><input type="text" value="__PUBLIC__/img/headimg.png">
+<!--<form action="" enctype="multipart/form-data" method="post">-->
+<!--类型图片：<input type="file" name="file"><br/>-->
+<!--类型名: <input type="text" name="name"><br/>-->
+<!--<input type="submit" value="提交">-->
+<!--</form>-->
+<!--<hr>-->
+<!--默认头像 <img src="__PUBLIC__/img/headimg.png" alt=""><input type="text" value="__PUBLIC__/img/headimg.png">-->
 
-<hr>
-<form action="{:U('Util/wxpay')}" method="post">
-    <input type="text" name="lessonid" value="1">
-    <input type="text" name="token" value="">
-    <input type="submit" value="支付">
-</form>
+<!--<hr>-->
+<!--<form action="{:U('Util/wxpay')}" method="post">-->
+<!--<input type="text" name="lessonid" value="1">-->
+<!--<input type="text" name="token" value="">-->
+<!--<input type="submit" value="支付">-->
+<!--</form>-->
 
+<!--<hr>-->
+<!--<form action="{:U('qiye_lesson/add')}" method="post">-->
+<!--类型 <select name="typeid" id="">-->
+<!--<volist name="lessontype" id="vo">-->
+<!--<option value="{$vo['id']}">{$vo['name']}</option>-->
+<!--</volist>-->
+<!--</select>-->
+<!--<br>-->
+<!--title: <input type="text" name="title"><br>-->
+<!--author: <input type="text" name="author"><br>-->
+<!--description <textarea name="description" cols="30" rows="10"></textarea> <br>-->
+<!--cover <input type="text" name="cover"><br>-->
+<!--audio_headimg <input type="text" name="audio_headimg"><br>-->
+<!--video_headimg <input type="text" name="video_headimg"><br>-->
+<!--recommend <input type="text" name="recommend" value="1"><br>-->
+<!--price <input type="text" name="price" value="0"><br>-->
+<!--<input type="submit" value="添加">-->
+<!--</form>-->
+<!--<form action="{:U('StudyLog/add')}" method="post">-->
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<td>token</td>-->
+            <!--<td><input type="text" name="token" value="3f495981456b7b1b19c5096ca7db6caf"></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>lessonid</td>-->
+            <!--<td><input type="text" name="lessonid" value="5"></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>study_time</td>-->
+            <!--<td><input type="text" name="study_time" value="2147483647"></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+            <!--<td>submit</td>-->
+            <!--<td><input type="submit" value="添加"></td>-->
+        <!--</tr>-->
+    <!--</table>-->
+<!--</form>-->
+<form action="{:U('Lesson/searchByKey')}" method="get">
+    <table>
+        <tr>
+            <td>key</td>
+            <td><input type="text" name="key" value=""></td>
+        </tr>
+        <tr>
+            <td>submit</td>
+            <td><input type="submit" value="添加"></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>

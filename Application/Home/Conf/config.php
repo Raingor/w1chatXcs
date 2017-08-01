@@ -9,7 +9,6 @@ return array(
     'DB_PWD' => 'rong123', // 密码
     'DB_PORT' => '3306', // 端口
     'DB_PREFIX' => 'qiye_', // 数据库表前缀
-    'DB_FIELDS_CACHE' => true, // 启用字段缓存
     'DB_CHARSET' => 'utf8', // 数据库编码默认采用utf8
     'DB_DEBUG' => TRUE, // 数据库调试模式 开启后可以记录SQL日志
 
